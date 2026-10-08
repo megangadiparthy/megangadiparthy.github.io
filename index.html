@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Megan Gadiparthy</title>
+<meta name="description" content="Megan Gadiparthy — software engineer, founder of Vela Health, and data science &amp; molecular cell biology student at UC Berkeley.">
+<meta property="og:title" content="Megan Gadiparthy">
+<meta property="og:description" content="Software engineer and founder of Vela Health. Data science &amp; molecular cell biology at UC Berkeley.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E0E10'/%3E%3Cpath d='M7 23V9h2.6l6.4 8.6L22.4 9H25v14h-2.8v-9.2L16 22l-6.2-8.2V23Z' fill='%23C4607A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0E0E10;--paper:#F7F5F0;--paper2:#EEEBE3;--rule:#CBC6B9;--muted:#777267;
+  --accent:#C4607A;--accent-glow:196,96,122;--accent-soft:#FFC0CB;--accent-light:#F2A5B8;
+  --deep:#221D27;--gold:#7A4F0A;--brown:#4A2D27;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --display:'Inter',system-ui,sans-serif;
+  --mono:'DM Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.2,.85,.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--display);background:var(--paper);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+::selection{background:var(--accent-soft)}
+
+/* ── Nav ── */
+.site-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(247,245,240,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--rule)}
+.site-nav-inner{max-width:1280px;margin:0 auto;padding:0 3rem;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--display);font-size:13px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ink);cursor:pointer;border:none;background:none}
+.tab-links{display:flex;list-style:none;position:relative}
+.tab-links a{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:0 1.1rem;height:56px;display:flex;align-items:center;transition:color .2s,transform .25s}
+.tab-links a:hover{color:var(--ink);transform:translateY(-2px)}
+.tab-links a.active{color:var(--ink)}
+.nav-indicator{position:absolute;bottom:0;height:2px;background:var(--accent);transition:left .45s var(--ease),width .45s var(--ease)}
+
+/* ── Panels ── */
+.tab-panel{display:none;min-height:100vh;padding-top:56px}
+.tab-panel.active{display:block;animation:panelIn .55s cubic-bezier(.22,1,.36,1) both}
+@keyframes panelIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.psec{padding:5rem;max-width:1280px;margin:0 auto}
+.sec-hdr{display:flex;align-items:baseline;justify-content:space-between;gap:1.5rem;margin-bottom:3.5rem;flex-wrap:wrap;animation:fadeUp .6s ease both}
+.sec-title{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.8rem);font-weight:300;line-height:1.05;letter-spacing:-.02em}
+.sec-title em{font-style:italic;color:var(--accent)}
+.sec-note{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.sec-note a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--accent-glow),.3)}
+
+/* ── Hero ── */
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero{--ph:min(440px,46vh,34vw);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);height:calc(100vh - 56px);height:calc(100svh - 56px);min-height:500px;overflow:hidden}
+.hero-left{position:relative;container-type:inline-size;padding:10vh 4rem 4vh 4.5rem;display:flex;flex-direction:column;justify-content:center;background-image:radial-gradient(rgba(var(--accent-glow),.16) 1px,transparent 1.3px);background-size:30px 30px}
+.hero-left::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 35% 45%,transparent 25%,rgba(247,245,240,.75) 95%);pointer-events:none}
+.hero-left>*{position:relative}
+.hero h1{font-family:var(--serif);font-size:clamp(3rem,min(5vw,10.5vh),6rem);font-weight:300;line-height:.92;letter-spacing:-.02em;margin-bottom:min(1.75rem,3vh);animation:fadeUp .7s ease .1s both}
+.hero h1 em{font-style:italic;color:var(--accent);text-shadow:0 0 30px rgba(var(--accent-glow),.18)}
+.roles{font-size:min(13px,3.3cqw);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:min(3.25rem,5.5vh);display:flex;column-gap:.62em;white-space:nowrap;animation:fadeUp .7s ease .2s both}
+.role{transition:color .4s,text-shadow .4s}
+.role.lit{color:var(--accent);text-shadow:0 0 18px rgba(var(--accent-glow),.35)}
+.roles .dot{opacity:.5}
+.hero-quote{margin-bottom:min(3.25rem,6vh);animation:fadeUp .7s ease .3s both}
+.hero-quote .q{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(2.1rem,min(3.7vw,7.5vh),4.5rem);line-height:.98;letter-spacing:-.045em}
+.hero-quote .by{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:min(1.4rem,2.2vh);display:flex;align-items:center;gap:1.75rem}
+.hero-quote .by svg{width:44px;height:44px;animation:flowerFloat 4s ease-in-out infinite;filter:drop-shadow(0 4px 6px rgba(var(--accent-glow),.18))}
+@keyframes flowerFloat{50%{transform:translateY(-5px) rotate(12deg)}}
+.hero-btns{display:flex;align-items:center;gap:min(1.75rem,5cqw);animation:fadeUp .7s ease .45s both}
+.btn-dark{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--paper);border:none;padding:1.15rem min(2.6rem,6cqw);white-space:nowrap;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
+.btn-dark:hover{background:#2a2a28;transform:translateY(-2px);box-shadow:0 10px 24px rgba(var(--accent-glow),.25)}
+.btn-line{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:3px;transition:color .2s}
+.btn-line:hover{color:var(--accent)}
+.hero-links{display:flex;flex-direction:column;align-items:flex-start;gap:.9rem}
+.btn-gh{display:inline-flex;align-items:center;gap:.45rem}
+.btn-gh svg{width:14px;height:14px;fill:currentColor}
+
+.hero-right{order:-1;background:#ec8cb2 url(assets/aura.jpg) center 60%/cover no-repeat;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3vh 2rem;gap:min(2.4rem,4.5vh);text-align:center;position:relative;overflow:hidden}
+.hero-right::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 38%,rgba(255,255,255,.22),transparent 50%);pointer-events:none}
+.bubble{position:absolute;border-radius:50%;border:1.5px solid rgba(var(--accent-glow),.45);background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.6),rgba(255,255,255,.06) 62%);pointer-events:none;animation:bubbleFloat var(--t,9s) ease-in-out var(--dl,0s) infinite}
+@keyframes bubbleFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(var(--dx,6px),-18px)}}
+.b1{width:34px;height:34px;top:9%;left:36%;--t:10s}
+.b2{width:12px;height:12px;top:18%;right:9%;--t:7s;--dl:-2s;--dx:-8px}
+.b3{width:8px;height:8px;top:27%;left:12%;--t:8s;--dl:-4s}
+.b4{width:16px;height:16px;top:63%;left:16%;--t:9s;--dl:-1s;--dx:10px}
+.b5{width:10px;height:10px;top:72%;right:14%;--t:6.5s;--dl:-3s}
+.b6{width:22px;height:22px;bottom:8%;right:30%;--t:11s;--dl:-5s;--dx:-6px}
+.hero:has(.courses.open){--ph:min(300px,30vh,26vw)}
+.photo-wrap{position:relative;width:var(--ph);height:var(--ph);flex-shrink:0;transition:width .6s var(--ease),height .6s var(--ease);animation:fadeIn .9s ease .2s both}
+.photo-wrap::before{content:'';position:absolute;inset:-18px;border-radius:50%;background:conic-gradient(from 0deg,#C4607A,#F2A5B8,#C4607A,#F7D0DA,#C4607A);animation:spin 7s linear infinite}
+.photo-wrap::after{content:'';position:absolute;inset:-9px;border-radius:50%;background:var(--accent-soft)}
+.ring-dashed{position:absolute;inset:calc(var(--ph) * -.077);border-radius:50%;border:1.5px dashed rgba(var(--accent-glow),.5);animation:spin 22s linear infinite reverse,pulseRing 3.2s ease-in-out infinite}
+.ring-halo{position:absolute;inset:calc(var(--ph) * -.14);border-radius:50%;border:1px solid rgba(255,255,255,.55);box-shadow:inset 0 0 40px rgba(255,255,255,.25)}
+@keyframes pulseRing{0%,100%{opacity:.5}50%{opacity:1}}
+.photo{position:relative;z-index:2;width:100%;height:100%;border-radius:50%;overflow:hidden;border:3px solid rgba(var(--accent-glow),.55);background:linear-gradient(145deg,#FFF0F3,#F7C4D0);animation:softPulse 3.5s ease-in-out .5s infinite;display:flex;align-items:center;justify-content:center}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
+.photo .mono{font-family:var(--serif);font-style:italic;font-weight:300;font-size:8rem;color:var(--accent);letter-spacing:-.04em}
+@keyframes softPulse{0%,100%{box-shadow:0 0 60px 14px rgba(var(--accent-glow),.38)}50%{box-shadow:0 0 85px 22px rgba(var(--accent-glow),.55)}}
+.sparkle{position:absolute;z-index:3;border-radius:50%;background:radial-gradient(circle,#fff 0%,var(--accent) 60%,transparent 100%);pointer-events:none;animation:twinkle 2.6s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:1;transform:scale(1)}}
+.s1{top:2%;right:8%;width:11px;height:11px}
+.s2{bottom:10%;right:-3%;width:7px;height:7px;animation-delay:.7s}
+.s3{bottom:-2%;left:14%;width:9px;height:9px;animation-delay:1.4s}
+.s4{top:18%;left:-4%;width:6px;height:6px;animation-delay:2.1s}
+
+.edu{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;margin-top:min(6.5rem,11vh);transition:margin-top .6s var(--ease);animation:fadeUp .7s ease .5s both}
+.hero:has(.courses.open) .edu{margin-top:0}
+.edu-row{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-bottom:min(1.3rem,2.2vh);text-align:left}
+.edu-seal{width:clamp(52px,min(9.5vh,6vw),88px);height:clamp(52px,min(9.5vh,6vw),88px);border-radius:50%;flex-shrink:0;background:#fff;box-shadow:0 2px 16px rgba(139,105,20,.3);transition:transform .6s var(--ease)}
+.edu-row:hover .edu-seal{transform:rotate(-12deg) scale(1.04)}
+.edu-school{font-family:var(--serif);font-size:clamp(1.8rem,min(5.4vh,3.3vw),3.1rem);font-weight:300;color:var(--gold);line-height:1.05;white-space:nowrap}
+.edu-school .bear{display:inline-block;font-size:.72em;margin-left:.6rem;vertical-align:.12em;animation:bearBob 3.2s ease-in-out infinite}
+@keyframes bearBob{50%{transform:translateY(-4px) rotate(-6deg)}}
+.edu-school{position:relative}
+.bear-pop{position:absolute;right:-.4em;bottom:115%;width:118px;height:153px;object-fit:cover;border:4px solid #fff;box-shadow:0 14px 30px rgba(60,40,52,.25);opacity:0;transform:translateY(10px) rotate(-2deg) scale(.92);transform-origin:bottom right;transition:opacity .35s ease,transform .5s var(--ease);pointer-events:none}
+.edu-row:hover .bear-pop{opacity:1;transform:translateY(0) rotate(5deg) scale(1)}
+.edu-degree{font-family:var(--mono);font-size:clamp(9px,1.4vh,12px);letter-spacing:.08em;text-transform:uppercase;color:#7A5A30;margin-top:.45rem;line-height:1.55}
+.courses-trigger{position:relative;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.16);border:1px solid rgba(74,45,39,.3);border-radius:999px;padding:12px 30px 12px 116px;cursor:pointer;font:inherit;transition:background .35s,box-shadow .35s}
+.courses-trigger:hover,.courses.open .courses-trigger{background:rgba(255,255,255,.34);box-shadow:0 8px 22px rgba(74,45,39,.14)}
+.chip-mini{position:absolute;left:16px;top:50%;width:32px;height:23px;border-radius:5px;background:rgba(255,255,255,.95);border:1px solid rgba(74,45,39,.35);font-family:var(--mono);font-size:6px;font-weight:700;display:flex;align-items:center;justify-content:center;color:var(--brown);box-shadow:0 4px 10px rgba(74,45,39,.18);transition:transform .55s var(--ease)}
+.cm1{transform:translate(0,-50%) rotate(-8deg);z-index:3}
+.cm2{transform:translate(8px,-50%) rotate(2deg);z-index:2}
+.cm3{transform:translate(16px,-50%) rotate(11deg);z-index:1}
+.courses:hover .cm1,.courses.open .cm1{transform:translate(-12px,-80%) rotate(-15deg)}
+.courses:hover .cm2,.courses.open .cm2{transform:translate(9px,-104%) rotate(3deg)}
+.courses:hover .cm3,.courses.open .cm3{transform:translate(28px,-80%) rotate(17deg)}
+.courses-label{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--brown)}
+.courses-arrow{display:inline-block;font-family:var(--mono);font-size:10px;color:var(--gold);transition:transform .4s}
+.courses.open .courses-arrow{transform:rotate(45deg)}
+.courses-panel{max-height:0;opacity:0;overflow:hidden;max-width:620px;transition:max-height .65s var(--ease),opacity .5s,margin-top .5s}
+.courses.open .courses-panel{max-height:520px;opacity:1;margin-top:14px}
+.course-group{margin-bottom:10px}
+.course-group-label{font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:var(--gold);margin-bottom:6px}
+.course-list{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.course{font-family:var(--mono);font-size:9px;padding:3px 9px;border:1px solid rgba(74,45,39,.34);color:var(--brown);background:rgba(255,255,255,.3);opacity:0;transform:translateY(8px) scale(.94);transition:opacity .4s,transform .45s var(--ease);transition-delay:calc(var(--i,0)*30ms)}
+.courses.open .course{opacity:1;transform:none}
+
+/* ── Marquee ── */
+.mbar{background:var(--deep);padding:1.2rem 0;overflow:hidden}
+.mbar-track{display:flex;gap:3rem;width:max-content;animation:mq 34s linear infinite}
+.mbar:hover .mbar-track{animation-play-state:paused}
+.mbar-item{font-family:var(--serif);font-size:1.05rem;font-style:italic;font-weight:300;color:rgba(247,245,240,.72);white-space:nowrap;transition:color .3s}
+.mbar-item:hover{color:#fff}
+.mbar-sep{color:var(--accent-light);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ── Values ── */
+.now{display:flex;gap:1rem 2.5rem;flex-wrap:wrap;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.now b{color:var(--ink);font-weight:500}
+.now .live{display:inline-flex;align-items:center;gap:.5rem;color:var(--accent)}
+.now .live::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);animation:blink 1.8s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(var(--accent-glow),.5)}50%{opacity:.6;box-shadow:0 0 0 6px rgba(var(--accent-glow),0)}}
+
+/* ── Building ── */
+#panel-building .psec{max-width:1400px;padding:2.5rem 4rem 3rem}
+#panel-building .sec-hdr{margin-bottom:1.75rem}
+.res-entry{border-top:1px solid var(--rule);display:grid;grid-template-columns:230px 1fr}
+.res-entry:last-child{border-bottom:1px solid var(--rule)}
+.res-left{padding:1.6rem 1.75rem;border-right:1px solid var(--rule);display:flex;flex-direction:column;gap:1rem}
+.res-logo{width:56px;height:56px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;background:#fff;overflow:hidden}
+.res-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.res-role{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.res-org,.res-period{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.05em;line-height:1.6}
+.res-link{font-family:var(--mono);font-size:9px;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--accent-glow),.3);align-self:flex-start}
+.res-right{padding:1.6rem 2.5rem}
+.res-title{font-family:var(--serif);font-size:1.6rem;font-weight:400;font-style:italic;margin-bottom:.75rem;line-height:1.2}
+.res-desc{font-family:var(--serif);font-size:1.02rem;font-weight:300;line-height:1.65;color:var(--muted);margin-bottom:1rem}
+.res-desc strong{color:var(--ink);font-weight:500}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(247,245,240,.08);margin:1.25rem 0}
+.met{background:var(--deep);padding:1rem 1.1rem}
+.res-left .metrics{grid-template-columns:1fr 1fr;margin:.5rem 0 0;width:100%}
+.res-left .met{padding:.8rem .85rem}
+.res-left .met-val{font-size:1.5rem}
+.met-val{font-family:var(--serif);font-size:1.75rem;font-weight:300;font-style:italic;color:var(--accent-light);line-height:1;margin-bottom:6px}
+.met-label{font-family:var(--mono);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:rgba(247,245,240,.5);line-height:1.5}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-family:var(--mono);font-size:8px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border:1px solid var(--rule);color:var(--muted)}
+.res-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:1.5rem}
+#panel-building .res-list{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2.25rem;margin-bottom:1.25rem}
+#panel-building .res-list li{font-size:.98rem;line-height:1.55}
+.res-list li{font-family:var(--serif);font-size:1rem;font-weight:300;line-height:1.6;color:var(--muted);padding-left:1.2rem;position:relative}
+.res-list li::before{content:'—';position:absolute;left:0;color:var(--rule)}
+.res-list li strong{color:var(--ink);font-weight:500}
+
+/* ── Experience ── */
+.exp-entry{padding:2.75rem 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
+.exp-entry:last-of-type{border-bottom:1px solid var(--rule)}
+.exp-left{display:flex;flex-direction:column;gap:.7rem}
+.exp-logo{width:52px;height:52px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;background:#fff;font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--accent);margin-bottom:.4rem;transition:transform .4s var(--ease);overflow:hidden;padding:7px}
+.exp-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.exp-logo.bleed{padding:0}
+.exp-logo.fill{padding:0;border-radius:12px;border:none;box-shadow:0 2px 8px rgba(34,29,39,.12)}
+.exp-entry:hover .exp-logo{transform:rotate(-6deg) scale(1.05)}
+.exp-co{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.exp-period{font-family:var(--mono);font-size:10px;color:var(--muted)}
+.exp-loc{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.04em}
+.exp-title{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.exp-role{font-family:var(--serif);font-size:1.35rem;font-style:italic;font-weight:300;color:var(--muted);margin-bottom:1.1rem}
+.exp-more{display:inline-block;margin-top:1rem;font-family:var(--mono);font-size:9px;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--accent-glow),.3);cursor:pointer;background:none;border-top:0;border-left:0;border-right:0;padding:0 0 1px}
+
+.arsenal{background:var(--ink);padding:6rem 5rem 6.5rem;background-image:radial-gradient(rgba(247,245,240,.1) 1px,transparent 1.4px);background-size:42px 42px}
+.arsenal-inner{max-width:1120px;margin:0 auto}
+.arsenal h3{font-family:var(--serif);font-size:clamp(2rem,4vw,3.5rem);font-weight:300;font-style:italic;color:var(--paper);margin-bottom:3.5rem}
+.ar-groups{display:flex;flex-direction:column;gap:3.5rem}
+.ar-label{font-family:var(--mono);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(247,245,240,.3);margin-bottom:1.75rem;padding-bottom:.85rem;border-bottom:1px solid rgba(247,245,240,.08)}
+.ar-row{display:flex;flex-wrap:wrap;gap:2rem 2.4rem;align-items:flex-start}
+.tool{display:flex;flex-direction:column;align-items:center;gap:12px;min-width:46px}
+.tool img,.tool svg{height:38px;width:auto;max-width:64px;filter:brightness(0) invert(1);opacity:.7;transition:filter .35s,opacity .35s,transform .4s var(--ease)}
+.tool svg{width:38px}
+.tool span{font-family:var(--mono);font-size:8px;letter-spacing:.06em;text-transform:uppercase;color:rgba(247,245,240,.4);white-space:nowrap;transition:color .3s}
+.tool:hover img,.tool:hover svg{filter:none;opacity:1;transform:translateY(-4px) scale(1.08)}
+.tool:hover span{color:var(--accent-light)}
+#panel-experience.active .tool{animation:fadeUp .5s ease both}
+#panel-experience.active .ar-row .tool:nth-child(2){animation-delay:.04s}
+#panel-experience.active .ar-row .tool:nth-child(3){animation-delay:.08s}
+#panel-experience.active .ar-row .tool:nth-child(4){animation-delay:.12s}
+#panel-experience.active .ar-row .tool:nth-child(5){animation-delay:.16s}
+#panel-experience.active .ar-row .tool:nth-child(6){animation-delay:.2s}
+#panel-experience.active .ar-row .tool:nth-child(7){animation-delay:.24s}
+#panel-experience.active .ar-row .tool:nth-child(8){animation-delay:.28s}
+
+/* ── Writing ── */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:4rem}
+.feat a{background:var(--paper);padding:2.25rem 2rem;text-decoration:none;display:flex;flex-direction:column;gap:.9rem;transition:background .25s}
+.feat a:hover{background:var(--paper2)}
+.feat .k{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.feat h3{font-family:var(--serif);font-size:1.6rem;font-weight:400;font-style:italic;line-height:1.15}
+.feat p{font-family:var(--serif);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.6}
+.feat .go{font-family:var(--mono);font-size:9px;color:var(--accent);margin-top:auto}
+.wgroup{display:grid;grid-template-columns:220px 1fr;gap:3rem;padding:2.25rem 0;border-top:1px solid var(--rule)}
+.wgroup:last-child{border-bottom:1px solid var(--rule)}
+.wgroup h4{font-family:var(--serif);font-size:1.5rem;font-weight:300;font-style:italic}
+.wgroup h4 span{display:block;font-family:var(--mono);font-style:normal;font-size:9px;letter-spacing:.1em;color:var(--muted);margin-top:.4rem;text-transform:uppercase}
+.wlist{list-style:none}
+.wlist a{display:flex;align-items:baseline;gap:1rem;padding:.7rem 0;border-bottom:1px solid rgba(203,198,185,.5);text-decoration:none;font-family:var(--serif);font-size:1.12rem;font-weight:300;transition:padding .25s,color .25s}
+.wlist li:last-child a{border-bottom:none}
+.wlist a:hover{padding-left:.6rem;color:var(--accent)}
+.wlist a small{margin-left:auto;font-family:var(--mono);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+
+/* ── Offline ── */
+.off-wrap{position:relative}
+.off-title{font-family:var(--serif);font-size:clamp(2.6rem,5vw,3.6rem);font-weight:400;font-style:italic;color:var(--accent);letter-spacing:-.02em;margin-bottom:3.5rem}
+.doodle{position:absolute;pointer-events:none;opacity:.75;animation:doodleFloat 6.5s ease-in-out infinite}
+.doodle svg{display:block;width:100%;height:auto}
+@keyframes doodleFloat{50%{transform:translateY(-9px) rotate(6deg)}}
+.hob-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);position:relative;z-index:1}
+.hob{height:300px;position:relative;overflow:hidden}
+.t-pink{background:linear-gradient(145deg,#fff5f8,#fbe8ee)}
+.t-cream{background:linear-gradient(145deg,#fffaf1,#f7efdd)}
+.t-lilac{background:linear-gradient(145deg,#faf6ff,#eee9f7)}
+.t-blue{background:linear-gradient(145deg,#f5f9ff,#e7effa)}
+.t-sage{background:linear-gradient(145deg,#f6faf3,#e7f0e2)}
+.t-peach{background:linear-gradient(145deg,#fff7f2,#fae7dc)}
+.t-mist{background:linear-gradient(145deg,#f5f9fc,#e2ecf4)}
+.t-rose{background:linear-gradient(145deg,#fff6f6,#fbe1e1)}
+.hob.places{grid-column:1/-1;container-type:inline-size}
+.hob.places:hover .ph,.hob.places.is-open .ph,.places .stack:focus-visible .ph{transform:translate(calc(var(--k) * (50cqw - 56px)),var(--hy)) rotate(var(--hr))}
+.stack{position:absolute;inset:0;width:100%;border:0;background:transparent;font:inherit;color:inherit;cursor:pointer;text-decoration:none;display:block}
+.stack::before{content:'';position:absolute;inset:-30%;background:radial-gradient(circle,rgba(var(--accent-glow),.13),transparent 55%);transform:scale(.6);transition:transform .65s var(--ease)}
+.stack:focus-visible{outline:2px solid var(--accent);outline-offset:-4px}
+.ph{position:absolute;z-index:2;left:50%;top:47%;width:66px;height:86px;margin:-43px 0 0 -33px;overflow:hidden;border:3px solid #fff;background:var(--ph-bg,linear-gradient(160deg,#ffe3ea,#f6c6d4));box-shadow:0 10px 24px rgba(60,40,52,.2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;transform:translate(var(--x),var(--y)) rotate(var(--r));transition:transform .65s var(--ease),width .65s var(--ease),height .65s var(--ease),margin .65s var(--ease),scale .3s var(--ease)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hob:not(.music):hover .ph:has(img):hover,.hob.is-open:not(.music) .ph:has(img):hover{scale:1.08;z-index:5;cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:4vh 4.5rem;background:rgba(34,29,39,.84);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:opacity .3s ease}
+.lb[hidden]{display:none}
+.lb.show{opacity:1}
+.lb figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:.9rem;max-width:min(100%,960px)}
+.lb img{display:block;max-width:100%;max-height:80vh;border:6px solid #fff;box-shadow:0 30px 80px rgba(0,0,0,.45);transform:scale(.94);transition:transform .35s var(--ease)}
+.lb.show img{transform:scale(1)}
+.lb figcaption{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:#fff;text-align:center}
+.lb-close,.lb-nav{position:absolute;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.08);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;transition:background .2s ease}
+.lb-close:hover,.lb-nav:hover{background:rgba(255,255,255,.22)}
+.lb-close{top:1.25rem;right:1.25rem}
+.lb-nav{top:50%;margin-top:-22px}
+.lb-prev{left:1rem}
+.lb-next{right:1rem}
+.lb-nav[hidden]{display:none}
+.hob:hover .ph,.hob.is-open .ph,.stack:focus-visible .ph{width:88px;height:114px;margin:-57px 0 0 -44px;transform:translate(var(--hx),var(--hy)) rotate(var(--hr))}
+.hob:hover .stack::before,.hob.is-open .stack::before{transform:scale(1)}
+.hob-title{position:absolute;z-index:6;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;white-space:nowrap;font-family:var(--serif);font-size:2.1rem;font-style:italic;font-weight:400;letter-spacing:-.02em;color:#3d2a35;text-shadow:0 0 10px #fff,0 0 22px rgba(255,255,255,.95),0 0 3px #fff;transition:top .55s var(--ease)}
+.hob-title small{display:block;margin-top:2px;font-family:var(--mono);font-style:normal;font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:#7a5f6c}
+.hob:hover .hob-title,.hob.is-open .hob-title,.stack:focus-visible .hob-title{top:87%}
+.hob.music:hover .hob-title,.hob.music.is-open .hob-title,.music .stack:focus-visible .hob-title{top:80%}
+.music .ph{width:84px;height:84px;margin:-42px 0 0 -42px;border-width:4px}
+.music .ph::before{content:'';position:absolute;inset:16%;border-radius:50%;background:radial-gradient(circle,#f4e9f7 0 9%,#2d2430 10% 38%,#3a2f3f 39% 41%,#2d2430 42% 70%,transparent 71%)}
+.hob.music:hover .ph,.hob.music.is-open .ph{width:100px;height:100px;margin:-50px 0 0 -50px}
+.spotify-cta{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-family:var(--mono);font-style:normal;font-size:9px;letter-spacing:.08em;color:#5b4452;text-shadow:none}
+.spotify-cta svg{width:14px;height:14px;fill:#1DB954;transition:transform .3s var(--ease)}
+.hob.music:hover .spotify-cta svg{transform:scale(1.2) rotate(8deg)}
+
+.reads{margin-top:5rem}
+.reads h3,.bits-head h3{font-family:var(--serif);font-size:2.15rem;font-weight:400;font-style:italic;letter-spacing:-.02em;margin-bottom:1.5rem}
+.reads h3 em{color:var(--accent)}
+.shelf{display:flex;flex-wrap:wrap;gap:2rem;padding:1.6rem 1.5rem 1.8rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.book{width:140px;text-decoration:none;color:inherit;transform:rotate(-1.5deg);transform-origin:center bottom;transition:transform .35s var(--ease)}
+.book:nth-child(2n){transform:rotate(1deg)}
+.book:hover{transform:translateY(-10px) scale(1.04)}
+.book img{display:block;width:124px;height:172px;margin:0 auto 10px;object-fit:cover;border:1px solid var(--rule);box-shadow:0 10px 20px rgba(14,14,16,.16)}
+.reads + .reads{margin-top:3.5rem}
+.pod img{height:124px}
+.book-title{font-family:var(--serif);font-size:1rem;font-weight:500;line-height:1.15;text-align:center}
+.book-author{margin-top:4px;font-family:var(--mono);font-size:7.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:center}
+
+/* ── Footer ── */
+.foot{background:var(--deep);color:var(--paper);padding:4rem 5rem}
+.foot-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.foot h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3.4rem);font-weight:300;line-height:1.05}
+.foot h2 em{color:var(--accent-light)}
+.foot-links{display:flex;gap:1.75rem;flex-wrap:wrap}
+.foot-links a{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:rgba(247,245,240,.75);border-bottom:1px solid rgba(242,165,184,.4);padding-bottom:2px;transition:color .2s}
+.foot-links a:hover{color:#fff}
+.foot-small{max-width:1280px;margin:2.5rem auto 0;font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:rgba(247,245,240,.35)}
+
+/* ── Social dock (home only) ── */
+.social-dock{position:fixed;right:26px;bottom:26px;z-index:150;display:flex;gap:4px;padding:7px 8px;background:rgba(255,255,255,.92);border:1px solid rgba(var(--accent-glow),.22);border-radius:16px;box-shadow:0 10px 30px rgba(85,50,64,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:opacity .35s,transform .35s}
+body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-events:none}
+.social-dock a{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:10px;color:#604553;transition:transform .22s,background .22s,color .22s}
+.social-dock a:hover{transform:translateY(-3px);background:#FFF3F8;color:var(--ink)}
+.social-dock svg{width:18px;height:18px;fill:currentColor}
+.social-dock .mail svg{fill:none;stroke:currentColor;stroke-width:1.8}
+
+/* ── Responsive ── */
+@media(max-width:1100px){
+  .hero-left{padding:10vh 2rem 4vh 2.5rem}
+  .hero-right{padding:3vh 1.25rem}
+  .feat,.hob-grid{grid-template-columns:1fr 1fr}
+  .wgroup,.exp-entry{grid-template-columns:1fr}
+  .exp-entry{gap:1.25rem}
+  .arsenal{padding:4rem 2rem 4.5rem}
+  .wgroup{gap:1rem}
+  #panel-building .psec{padding:1.75rem 2rem 3rem}
+  #panel-building .sec-hdr{margin-bottom:1.25rem}
+  .res-entry{grid-template-columns:190px 1fr}
+  .res-left{padding:1.4rem 1.25rem;gap:.85rem}
+  .res-right{padding:1.4rem 1.75rem}
+  .res-title{font-size:1.45rem;margin-bottom:.6rem}
+  .res-desc{font-size:.98rem;line-height:1.55;margin-bottom:.8rem}
+  #panel-building .res-list{gap:.5rem 1.5rem;margin-bottom:1rem}
+  #panel-building .res-list li{font-size:.95rem;line-height:1.45}
+  .res-left .met{padding:.7rem .7rem}
+  .res-left .met-val{font-size:1.3rem}
+  .psec{padding:3.5rem 2rem}
+  .site-nav-inner{padding:0 1.5rem}
+  .foot{padding:3rem 2rem}
+}
+@media(max-width:860px){
+  .res-entry{grid-template-columns:1fr}
+  .res-left{border-right:none;border-bottom:1px solid var(--rule);flex-direction:row;flex-wrap:wrap;align-items:center;gap:.75rem 2rem;padding:1.25rem 2rem}
+  .res-link{align-self:center}
+  .res-left .metrics{grid-template-columns:repeat(4,1fr);flex:0 0 100%}
+  #panel-building .res-list{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .hero,.hero:has(.courses.open){--ph:min(320px,72vw)}
+  .hero{grid-template-columns:1fr;height:auto;min-height:0}  .hero-right{padding:4.5rem 1.25rem 3.5rem;gap:2rem}
+  .hero-left{padding:3.5rem 1.75rem 4rem}
+  .hero h1{font-size:clamp(3rem,13vw,4.2rem)}
+  .hero-quote .q{font-size:clamp(2.1rem,9.5vw,3rem)}
+  .edu-school{font-size:clamp(1.9rem,8vw,2.6rem)}
+  .edu-seal{width:60px;height:60px}
+  .edu-degree{font-size:10px}
+}
+@media(max-width:640px){
+  .site-nav-inner{flex-wrap:wrap;height:auto;padding:.6rem 1rem;gap:.25rem}
+  .tab-links{width:100%;overflow-x:auto}
+  .tab-links a{height:38px;padding:0 .75rem;font-size:9px;white-space:nowrap}
+  .tab-panel{padding-top:88px}
+  .photo .mono{font-size:5rem}
+  .social-dock{right:14px;bottom:14px}
+  .feat,.hob-grid{grid-template-columns:1fr}
+  .res-left .metrics{grid-template-columns:1fr 1fr}
+  .hob{height:280px}
+  .hob.food:hover .ph,.hob.food.is-open .ph,.food .stack:focus-visible .ph{transform:translate(calc(var(--hx) * .78),var(--hy)) rotate(var(--hr))}
+  .lb{padding:4.5rem 1rem 5.5rem}
+  .lb img{max-height:68vh}
+  .lb-nav{top:auto;bottom:1.25rem;margin-top:0}
+  .lb-prev{left:calc(50% - 56px)}
+  .lb-next{right:calc(50% - 56px)}
+  .ar-row{gap:1.75rem 1.6rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <button class="nav-logo" data-tab="home">Megan Gadiparthy</button>
+    <ul class="tab-links">
+      <span class="nav-indicator" id="nav-indicator"></span>
+      <li><a href="#home" data-tab="home">Home</a></li>
+      <li><a href="#experience" data-tab="experience">Experience</a></li>
+      <li><a href="#building" data-tab="building">Building</a></li>
+      <li><a href="#writing" data-tab="writing">Writing</a></li>
+      <li><a href="#offline" data-tab="offline">Offline</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ====== HOME ====== -->
+<section class="tab-panel" id="panel-home">
+  <div class="hero">
+    <div class="hero-left">
+      <h1>Megan<br><em>Gadiparthy.</em></h1>
+      <p class="roles">
+        <span class="role">Software Engineer</span><span class="dot">&middot;</span>
+        <span class="role">Founder</span><span class="dot">&middot;</span>
+        <span class="role">iOS Developer</span>
+      </p>
+      <div class="hero-quote">
+        <div class="q">&ldquo;Medicine should not begin</div>
+        <div class="q">when disease does.&rdquo;</div>
+        <div class="by">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1.4" style="color:var(--accent)"><ellipse cx="20" cy="11" rx="4.6" ry="7.6"/><ellipse cx="20" cy="11" rx="4.6" ry="7.6" transform="rotate(72 20 20)"/><ellipse cx="20" cy="11" rx="4.6" ry="7.6" transform="rotate(144 20 20)"/><ellipse cx="20" cy="11" rx="4.6" ry="7.6" transform="rotate(216 20 20)"/><ellipse cx="20" cy="11" rx="4.6" ry="7.6" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="2.6" fill="var(--accent)"/></svg>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <button class="btn-dark" data-tab="experience">View my work &rarr;</button>
+        <div class="hero-links">
+        <a class="btn-line" href="mailto:megan.gadiparthy@berkeley.edu">Get in touch &rarr;</a>
+        <a class="btn-line btn-gh" href="https://github.com/megangadiparthy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub &#8599;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <span class="bubble b1"></span><span class="bubble b2"></span><span class="bubble b3"></span>
+      <span class="bubble b4"></span><span class="bubble b5"></span><span class="bubble b6"></span>
+
+      <div class="photo-wrap">
+        <span class="ring-halo"></span>
+        <span class="ring-dashed"></span>
+        <span class="sparkle s1"></span><span class="sparkle s2"></span><span class="sparkle s3"></span><span class="sparkle s4"></span>
+        <div class="photo">
+          <span class="mono">MG</span>
+          <img src="assets/megan.jpg" alt="Portrait of Megan Gadiparthy" onerror="this.remove()">
+        </div>
+      </div>
+
+      <div class="edu">
+        <div class="edu-row">
+          <img class="edu-seal" src="assets/berkeley-seal.svg" alt="UC Berkeley seal">
+          <div>
+            <div class="edu-school">UC Berkeley<span class="bear" aria-hidden="true">&#128059;</span><img class="bear-pop" src="assets/berkeley-bear.jpg" alt="" loading="lazy"></div>
+            <div class="edu-degree">B.A. Data Science &amp; Molecular Cell Biology<br>Class of 2027</div>
+          </div>
+        </div>
+        <div class="courses" id="courses">
+          <button class="courses-trigger" type="button" aria-expanded="false">
+            <span class="chip-mini cm1">CS</span>
+            <span class="chip-mini cm2">DATA</span>
+            <span class="chip-mini cm3">MATH</span>
+            <span class="courses-label">Coursework <span class="courses-arrow">&#8599;</span></span>
+          </button>
+          <div class="courses-panel">
+            <div class="course-group">
+              <div class="course-group-label">COMPUTER SCIENCE</div>
+              <div class="course-list">
+                <span class="course" style="--i:0">CS 61B &mdash; Data Structures &amp; Algorithms</span>
+                <span class="course" style="--i:1">CS 168 &mdash; Internet Architecture</span>
+                <span class="course" style="--i:2">CS 186 &mdash; Database Systems</span>
+                <span class="course" style="--i:3">CS 189 &mdash; Machine Learning</span>
+              </div>
+            </div>
+            <div class="course-group">
+              <div class="course-group-label">DATA &amp; MATH</div>
+              <div class="course-list">
+                <span class="course" style="--i:4">DATA C8 &mdash; Foundations of Data Science</span>
+                <span class="course" style="--i:5">DATA C88C &mdash; Computational Structures in Data Science (Python)</span>
+                <span class="course" style="--i:6">DATA C100 &mdash; Data Science</span>
+                <span class="course" style="--i:7">DATA 144 &mdash; Data Mining &amp; Analytics</span>
+                <span class="course" style="--i:8">STAT 134 &mdash; Probability</span>
+                <span class="course" style="--i:8">PB HLTH 142 &mdash; Public Health Statistics</span>
+                <span class="course" style="--i:9">MATH 56 &mdash; Linear Algebra</span>
+              </div>
+            </div>
+            <div class="course-group">
+              <div class="course-group-label">BIOLOGY, CHEMISTRY &amp; PHYSICS</div>
+              <div class="course-list">
+                <span class="course" style="--i:10">BIO 1A &mdash; General Biology</span>
+                <span class="course" style="--i:10">BIO 1B &mdash; Plant Biology</span>
+                <span class="course" style="--i:11">MCB 102 &mdash; Biochemistry</span>
+                <span class="course" style="--i:12">MCB 104 &mdash; Genetics</span>
+                <span class="course" style="--i:13">INTEGBI C139 &mdash; Neurobiology of Stress &amp; Resilience</span>
+                <span class="course" style="--i:14">CHEM 1A &mdash; General Chemistry</span>
+                <span class="course" style="--i:15">CHEM 3A / 3B &mdash; Organic Chemistry</span>
+                <span class="course" style="--i:16">PHYSICS 8A &mdash; Introductory Physics</span>
+              </div>
+            </div>
+            <div class="course-group">
+              <div class="course-group-label">BUSINESS &amp; PSYCHOLOGY</div>
+              <div class="course-list">
+                <span class="course" style="--i:17">UGBA 10 &mdash; Principles of Business</span>
+                <span class="course" style="--i:18">PSYCH 1 &mdash; Psychology</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mbar" aria-hidden="true">
+    <div class="mbar-track">
+      <span class="mbar-item">prevention is the most powerful medicine</span><span class="mbar-sep">&#10022;</span>
+      <span class="mbar-item">flares hide in the lag</span><span class="mbar-sep">&#10022;</span>
+      <span class="mbar-item">patterns, not guesses</span><span class="mbar-sep">&#10022;</span>
+      <span class="mbar-item">sleep is the best medicine for the brain</span><span class="mbar-sep">&#10022;</span>
+      <span class="mbar-item">health is founder infrastructure</span><span class="mbar-sep">&#10022;</span>
+      <span class="mbar-item">eat the rainbow</span><span class="mbar-sep">&#10022;</span>
+      <span class="mbar-item">prevention is the most powerful medicine</span><span class="mbar-sep">&#10022;</span>
+      <span class="mbar-item">flares hide in the lag</span><span class="mbar-sep">&#10022;</span>
+      <span class="mbar-item">patterns, not guesses</span><span class="mbar-sep">&#10022;</span>
+      <span class="mbar-item">sleep is the best medicine for the brain</span><span class="mbar-sep">&#10022;</span>
+      <span class="mbar-item">health is founder infrastructure</span><span class="mbar-sep">&#10022;</span>
+      <span class="mbar-item">eat the rainbow</span><span class="mbar-sep">&#10022;</span>
+    </div>
+  </div>
+
+  <div class="psec">
+    <div class="now">
+      <span class="live">Now</span>
+      <span>Building <b>Vela Health</b></span>
+      <span>Building <b>Alta</b></span>
+      <span>iOS at <b>Berkeley Mobile</b></span>
+      <span>Studying at <b>UC Berkeley</b></span>
+      <span>Previously <b>SiriusXM</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====== EXPERIENCE ====== -->
+<section class="tab-panel" id="panel-experience">
+  <div class="psec">
+    <div class="sec-hdr">
+      <h2 class="sec-title">Where I've <em>worked</em></h2>
+      <span class="sec-note"><a href="https://www.linkedin.com/in/megan-gadiparthy" target="_blank" rel="noopener">LinkedIn &#8599;</a></span>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-left">
+        <div class="exp-logo"><img src="assets/logos/siriusxm.svg" alt="SiriusXM logo"></div>
+        <div class="exp-co">SiriusXM</div>
+        <div class="exp-period">Jun &ndash; Aug 2026</div>
+        <div class="exp-loc">iOS Engineering Intern</div>
+      </div>
+      <div>
+        <div class="exp-title">SiriusXM</div>
+        <div class="exp-role">iOS Software Engineer Intern &mdash; Connect Mobile SDK</div>
+        <ul class="res-list">
+          <li><strong>Built mainly on iOS in Swift</strong>, including work on the OmniSecure iOS app.</li>
+          <li><strong>Built across platforms</strong> &mdash; the Tesla integration, an Apple Watch app, and a sample rental car app for the SDK.</li>
+          <li><strong>Architected and deployed cloud-native services</strong> on AWS (Lambda, ECS, DynamoDB, S3) for the Connect Mobile SDK team's proof-of-concept funnel, expanding SiriusXM audio into new market verticals.</li>
+          <li><strong>Engineered high-concurrency features</strong> from inception to delivery, with GitHub Actions CI/CD pipelines keeping the architecture reliable and fast at scale.</li>
+          <li><strong>Presented my ideas weekly</strong> to the team and took part in daily standups.</li>
+        </ul>
+        <div class="tags"><span class="tag">Swift</span><span class="tag">iOS</span><span class="tag">watchOS</span><span class="tag">AWS Lambda</span><span class="tag">ECS</span><span class="tag">DynamoDB</span><span class="tag">S3</span><span class="tag">GitHub Actions</span></div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-left">
+        <div class="exp-logo bleed"><img src="assets/logos/vela.png" alt="Vela Health logo"></div>
+        <div class="exp-co">Vela Health</div>
+        <div class="exp-period">Jul 2026 &ndash; Present</div>
+        <div class="exp-loc">Berkeley, CA</div>
+      </div>
+      <div>
+        <div class="exp-title">Vela</div>
+        <div class="exp-role">CEO &amp; Engineer</div>
+        <ul class="res-list">
+          <li><strong>Architected normalized PostgreSQL schemas</strong> for health metrics, optimizing queries for high-concurrency analytics and longitudinal tracking of each user's data.</li>
+          <li><strong>Scaled a full-stack platform</strong> (React, Node.js, PostgreSQL) on AWS, with data models designed to support 10,000+ active users.</li>
+        </ul>
+        <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">AWS</span></div>
+        <button class="exp-more" data-tab="building">The full Vela story &rarr;</button>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-left">
+        <div class="exp-logo fill"><img src="assets/logos/berkeley-mobile.png" alt="Berkeley Mobile app icon"></div>
+        <div class="exp-co">Berkeley Mobile</div>
+        <div class="exp-period">Jan 2026 &ndash; Present</div>
+        <div class="exp-loc">Berkeley, CA</div>
+      </div>
+      <div>
+        <div class="exp-title">Berkeley Mobile Developers</div>
+        <div class="exp-role">iOS Developer</div>
+        <ul class="res-list">
+          <li><strong>Cut network overhead by 30%</strong> by building a persistent CoreData caching layer and URLSession request batching, improving offline use for 3,000 daily active users.</li>
+          <li><strong>Ship production features with 15+ engineers</strong> in an Agile team, integrating third-party APIs with robust error handling and fallbacks.</li>
+        </ul>
+        <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">CoreData</span><span class="tag">URLSession</span><span class="tag">REST APIs</span></div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-left">
+        <div class="exp-logo"><img src="assets/logos/ulab.png" alt="ULAB at Berkeley logo"></div>
+        <div class="exp-co">ULAB at Berkeley</div>
+        <div class="exp-period">Sep 2023 &ndash; May 2024</div>
+        <div class="exp-loc">Undergraduate Research</div>
+      </div>
+      <div>
+        <div class="exp-title">Undergraduate Lab at Berkeley</div>
+        <div class="exp-role">Researcher &mdash; Insulin signaling &amp; breast cancer</div>
+        <ul class="res-list">
+          <li><strong>Modeled nonlinear insulin signaling dynamics</strong> with systems of ordinary differential equations, using parametric sensitivity analysis to find critical regulatory nodes and predict small-molecule inhibitors of breast cancer cell proliferation.</li>
+          <li><strong>Designed and maintained data ingestion workflows</strong> for the computational models, keeping data clean and consistent for downstream analysis.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">ODE modeling</span><span class="tag">Sensitivity analysis</span><span class="tag">Systems biology</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="arsenal">
+    <div class="arsenal-inner">
+      <h3>Technical Arsenal</h3>
+      <div class="ar-groups">
+        <div>
+          <div class="ar-label">Languages</div>
+          <div class="ar-row">
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt=""><span>Python</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt=""><span>SQL</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt=""><span>Java</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-plain.svg" alt=""><span>Swift</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt=""><span>JavaScript</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-plain.svg" alt=""><span>C++</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt=""><span>R</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="ar-label">Full-stack &amp; Mobile</div>
+          <div class="ar-row">
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-plain.svg" alt=""><span>SwiftUI</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt=""><span>CoreData</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt=""><span>React</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" alt=""><span>Node.js</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-plain.svg" alt=""><span>REST APIs</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-plain.svg" alt=""><span>JWT / OAuth 2.0</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="ar-label">Cloud &amp; Infrastructure</div>
+          <div class="ar-row">
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt=""><span>AWS</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt=""><span>Docker</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt=""><span>Kubernetes</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt=""><span>Terraform</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt=""><span>Azure</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt=""><span>GitHub Actions</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""><span>Git</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt=""><span>Unix / Bash</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="ar-label">Data &amp; AI</div>
+          <div class="ar-row">
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt=""><span>PostgreSQL</span></div>
+            <div class="tool">
+              <svg viewBox="0 0 40 40" fill="none" stroke="#C4607A" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M8 8l24 24M32 8 8 32"/><circle cx="20" cy="20" r="5" fill="#C4607A" stroke="none"/></svg>
+              <span>dbt / ETL</span>
+            </div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt=""><span>PyTorch</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt=""><span>scikit-learn</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt=""><span>Pandas</span></div>
+            <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt=""><span>NumPy</span></div>
+            <div class="tool">
+              <svg viewBox="0 0 40 40" fill="none" stroke="#C4607A" stroke-width="2.6" aria-hidden="true"><rect x="3" y="13" width="20" height="14" rx="7" transform="rotate(-30 13 20)"/><rect x="17" y="13" width="20" height="14" rx="7" transform="rotate(-30 27 20)"/></svg>
+              <span>LangChain</span>
+            </div>
+            <div class="tool">
+              <svg viewBox="0 0 40 40" fill="none" stroke="#C4607A" stroke-width="2.4" aria-hidden="true"><circle cx="20" cy="8" r="4.5"/><circle cx="8" cy="31" r="4.5"/><circle cx="32" cy="31" r="4.5"/><path d="M18 12 10 27M22 12l8 15M12.5 31h15"/></svg>
+              <span>MCP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BUILDING ====== -->
+<section class="tab-panel" id="panel-building">
+  <div class="psec">
+    <div class="sec-hdr">
+      <h2 class="sec-title">What I'm <em>building</em></h2>
+      <span class="sec-note"><a href="https://healthvela.com" target="_blank" rel="noopener">healthvela.com &#8599;</a></span>
+    </div>
+
+    <div class="res-entry">
+      <div class="res-left">
+        <div class="res-logo"><img src="assets/logos/vela.png" alt="Vela Health logo"></div>
+        <div>
+          <div class="res-role">CEO &amp; Engineer</div>
+          <div class="res-org">Vela Health</div>
+        </div>
+        <div class="res-period">Jul 2026 &ndash; Present<br>Berkeley, CA</div>
+        <a class="res-link" href="https://healthvela.com" target="_blank" rel="noopener">Visit Vela &#8599;</a>
+        <div class="metrics">
+          <div class="met"><div class="met-val">10k+</div><div class="met-label">user scale</div></div>
+          <div class="met"><div class="met-val">30d</div><div class="met-label">tracking</div></div>
+          <div class="met"><div class="met-val">25</div><div class="met-label">articles</div></div>
+          <div class="met"><div class="met-val">450+</div><div class="met-label">commits</div></div>
+        </div>
+      </div>
+      <div class="res-right">
+        <div class="res-title">Finding the delayed patterns behind disease &mdash; starting with skin</div>
+        <p class="res-desc">
+          Food, sleep, and stress often trigger flares <strong>days later</strong>, so people miss them.
+          Vela tracks them for <strong>30 days</strong> and shows what's really driving your skin.
+          Skin is just the start &mdash; the goal is to <strong>prevent many diseases</strong> early.
+        </p>
+        <ul class="res-list">
+          <li><strong>Built it end to end</strong> &mdash; React / Next.js</li>
+          <li><strong>PostgreSQL on AWS</strong> &mdash; built for 10k+ users</li>
+          <li><strong>Grounded AI</strong> &mdash; answers from a medical knowledge base</li>
+          <li><strong>Growth</strong> &mdash; free tools, SEO articles, a waitlist</li>
+          <li><strong>Business</strong> &mdash; Stripe subscriptions &amp; a freemium paywall</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">ChromaDB</span><span class="tag">AWS</span><span class="tag">Stripe</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-entry">
+      <div class="res-left">
+        <div class="res-logo">
+          <svg width="30" height="30" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="14" stroke="#6B7AFF" stroke-width="3" stroke-dasharray="64 88" stroke-linecap="round" transform="rotate(-90 20 20)"/><circle cx="20" cy="20" r="3" fill="#6B7AFF"/></svg>
+        </div>
+        <div>
+          <div class="res-role">Building</div>
+          <div class="res-org">Alta &middot; iOS</div>
+        </div>
+        <div class="res-period">2026</div>
+      </div>
+      <div class="res-right">
+        <div class="res-title">Alta &mdash; the Future Self app</div>
+        <p class="res-desc">
+          Alta helps you close the gap between who you are and who you want to be &mdash;
+          one small daily action at a time. <strong>Momentum, not motivation.</strong>
+        </p>
+        <div class="tags">
+          <span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">Supabase</span><span class="tag">RevenueCat</span><span class="tag">iOS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== WRITING ====== -->
+<section class="tab-panel" id="panel-writing">
+  <div class="psec">
+    <div class="sec-hdr">
+      <h2 class="sec-title">Things I <em>write</em> about</h2>
+      <span class="sec-note">25 articles on <a href="https://healthvela.com/learn/" target="_blank" rel="noopener">Vela Learn &#8599;</a></span>
+    </div>
+
+    <div class="feat">
+      <a href="https://healthvela.com/learn/prevention-is-the-best-medicine.html" target="_blank" rel="noopener">
+        <span class="k">Longevity · Prevention</span>
+        <h3>Prevention is the most powerful medicine we have</h3>
+        <p>Why the biggest health wins happen years before anything shows up on a chart.</p>
+        <span class="go">Read &#8599;</span>
+      </a>
+      <a href="https://healthvela.com/learn/autoimmune-symptom-tracking-app.html" target="_blank" rel="noopener">
+        <span class="k">Autoimmune · Tracking</span>
+        <h3>Why flares hide in the lag</h3>
+        <p>Autoimmune symptoms often trail their triggers by days &mdash; and how tracking makes that visible.</p>
+        <span class="go">Read &#8599;</span>
+      </a>
+      <a href="https://healthvela.com/learn/entrepreneur-health-why-it-matters.html" target="_blank" rel="noopener">
+        <span class="k">Lifestyle · Founders</span>
+        <h3>Health is your real competitive edge</h3>
+        <p>Sleep, stress lag, and recovery during launch weeks &mdash; health as founder infrastructure.</p>
+        <span class="go">Read &#8599;</span>
+      </a>
+    </div>
+
+    <div class="wgroup">
+      <h4>Longevity<span>8 articles</span></h4>
+      <ul class="wlist">
+        <li><a href="https://healthvela.com/learn/longevity-what-actually-works.html" target="_blank" rel="noopener">What actually adds healthy years &mdash; and what's still hype<small>Foundations</small></a></li>
+        <li><a href="https://healthvela.com/learn/exercise-nutrition-emotional-health-longevity.html" target="_blank" rel="noopener">Exercise is the strongest longevity drug<small>Foundations</small></a></li>
+        <li><a href="https://healthvela.com/learn/fast-death-vs-slow-death.html" target="_blank" rel="noopener">Fast death vs. slow death<small>Foundations</small></a></li>
+        <li><a href="https://healthvela.com/learn/heart-disease-deadliest-killer.html" target="_blank" rel="noopener">Heart disease is the deadliest killer &mdash; and one of the most preventable<small>Heart</small></a></li>
+        <li><a href="https://healthvela.com/learn/sleep-best-medicine-for-the-brain.html" target="_blank" rel="noopener">Sleep is the best medicine for your brain<small>Brain</small></a></li>
+        <li><a href="https://healthvela.com/learn/medicine-treats-disease-too-late.html" target="_blank" rel="noopener">Why medicine so often treats disease too late<small>Healthcare</small></a></li>
+        <li><a href="https://healthvela.com/learn/prevention-is-the-best-medicine.html" target="_blank" rel="noopener">Prevention is the most powerful medicine we have<small>Prevention</small></a></li>
+        <li><a href="https://healthvela.com/learn/importance-of-low-stress.html" target="_blank" rel="noopener">Why calm is a real health lever<small>Stress</small></a></li>
+      </ul>
+    </div>
+
+    <div class="wgroup">
+      <h4>Skin &amp; flares<span>10 articles</span></h4>
+      <ul class="wlist">
+        <li><a href="https://healthvela.com/learn/autoimmune-symptom-tracking-app.html" target="_blank" rel="noopener">Autoimmune symptom tracking: why flares hide in the lag<small>Autoimmune</small></a></li>
+        <li><a href="https://healthvela.com/learn/habits-for-psoriasis-flare-ups.html" target="_blank" rel="noopener">The Koebner effect &amp; quiet levers for psoriasis<small>Psoriasis</small></a></li>
+        <li><a href="https://healthvela.com/learn/food-triggers-psoriasis-habits.html" target="_blank" rel="noopener">Food triggers for psoriasis: why the reaction shows up late<small>Psoriasis</small></a></li>
+        <li><a href="https://healthvela.com/learn/sample-psoriasis-triggers.html" target="_blank" rel="noopener">Sample psoriasis triggers &mdash; sleep, stress, sugar, meds &amp; friction<small>Triggers</small></a></li>
+        <li><a href="https://healthvela.com/learn/habits-for-eczema-flare-ups.html" target="_blank" rel="noopener">Why eczema night itch hits harder<small>Eczema</small></a></li>
+        <li><a href="https://healthvela.com/learn/habits-for-acne-breakouts.html" target="_blank" rel="noopener">The delayed breakout nobody mentions<small>Acne</small></a></li>
+        <li><a href="https://healthvela.com/learn/habits-for-rosacea-flares.html" target="_blank" rel="noopener">Why your face remembers heat<small>Rosacea</small></a></li>
+        <li><a href="https://healthvela.com/learn/sleep-and-skin-connection.html" target="_blank" rel="noopener">Why itch gets louder after midnight<small>Sleep</small></a></li>
+        <li><a href="https://healthvela.com/learn/sunlight-and-skin.html" target="_blank" rel="noopener">Sunlight and skin: vitamin D and morning light<small>Sunlight</small></a></li>
+        <li><a href="https://healthvela.com/learn/sunlight-antifungal-and-coconut-oil.html" target="_blank" rel="noopener">Sunlight, coconut oil &amp; antifungal skin care<small>Fungal-prone skin</small></a></li>
+      </ul>
+    </div>
+
+    <div class="wgroup">
+      <h4>Food &amp; lifestyle<span>7 articles</span></h4>
+      <ul class="wlist">
+        <li><a href="https://healthvela.com/learn/importance-of-rainbow-diet.html" target="_blank" rel="noopener">Why color on your plate matters<small>Diet</small></a></li>
+        <li><a href="https://healthvela.com/learn/importance-of-fiber.html" target="_blank" rel="noopener">Fiber for skin, gut &amp; steady energy<small>Diet</small></a></li>
+        <li><a href="https://healthvela.com/learn/culinary-herbs-taste-and-health.html" target="_blank" rel="noopener">Kitchen herbs: mint, thyme &amp; friends<small>Diet</small></a></li>
+        <li><a href="https://healthvela.com/learn/modern-lifestyle-and-health.html" target="_blank" rel="noopener">Why the modern default is hard on your body<small>Lifestyle</small></a></li>
+        <li><a href="https://healthvela.com/learn/people-around-you-and-health.html" target="_blank" rel="noopener">How the people around you shape your health<small>Social</small></a></li>
+        <li><a href="https://healthvela.com/learn/improving-all-areas-of-life.html" target="_blank" rel="noopener">Improving all areas of life &mdash; without burning out<small>Whole life</small></a></li>
+        <li><a href="https://healthvela.com/learn/entrepreneur-health-why-it-matters.html" target="_blank" rel="noopener">Why entrepreneur health is your real competitive edge<small>Founders</small></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ====== OFFLINE ====== -->
+<section class="tab-panel" id="panel-offline">
+  <div class="psec off-wrap">
+    <span class="doodle" style="width:40px;top:40px;right:14%" aria-hidden="true"><svg viewBox="0 0 40 36"><path d="M20 33S3 22 3 11a8.5 8.5 0 0 1 17-2 8.5 8.5 0 0 1 17 2c0 11-17 22-17 22Z" fill="none" stroke="#D889A3" stroke-width="2"/></svg></span>
+    <span class="doodle" style="width:38px;top:52px;right:7%;animation-delay:-2s" aria-hidden="true"><svg viewBox="0 0 64 64"><g fill="#E7A3B7"><ellipse cx="32" cy="17" rx="7" ry="12"/><ellipse cx="32" cy="17" rx="7" ry="12" transform="rotate(72 32 32)"/><ellipse cx="32" cy="17" rx="7" ry="12" transform="rotate(144 32 32)"/><ellipse cx="32" cy="17" rx="7" ry="12" transform="rotate(216 32 32)"/><ellipse cx="32" cy="17" rx="7" ry="12" transform="rotate(288 32 32)"/></g><circle cx="32" cy="32" r="5" fill="#fff"/></svg></span>
+    <span class="doodle" style="width:30px;top:470px;left:1%;animation-delay:-3.4s" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 2c1 8 6 13 14 14-8 1-13 6-14 14-1-8-6-13-14-14 8-1 13-6 14-14Z" fill="none" stroke="#D889A3" stroke-width="1.8"/></svg></span>
+    <span class="doodle" style="width:70px;top:150px;right:2%;animation-delay:-4.5s" aria-hidden="true"><svg viewBox="0 0 90 30"><path d="M4 18c13-17 18 13 31-4s20 14 31-3 17 6 20 2" fill="none" stroke="#D9A1B3" stroke-width="2" stroke-linecap="round"/></svg></span>
+
+    <h2 class="off-title">Offline</h2>
+
+    <div class="hob-grid">
+      <div class="hob t-pink food">
+        <button class="stack" type="button" aria-label="Show food photos">
+          <span class="ph" style="--x:-40px;--y:-16px;--r:-10deg;--hx:-125px;--hy:-24px;--hr:-9deg">&#129367;<img src="assets/offline/food-1.jpg" alt="Shelves of fresh-cut fruit cups" onerror="this.remove()"></span>
+          <span class="ph" style="--x:38px;--y:-20px;--r:9deg;--hx:125px;--hy:-24px;--hr:9deg">&#129361;<img src="assets/offline/food-2.jpg" alt="A latte from Equator Coffees overlooking the bay" onerror="this.remove()"></span>
+          <span class="ph" style="--x:-30px;--y:22px;--r:7deg;--hx:-83px;--hy:-34px;--hr:-6deg">&#127827;<img src="assets/offline/food-3.jpg" alt="The patio at Erewhon" onerror="this.remove()"></span>
+          <span class="ph" style="--x:32px;--y:20px;--r:-7deg;--hx:83px;--hy:-34px;--hr:6deg">&#127836;<img src="assets/offline/food-5.jpg" alt="Pad thai, rice and eggplant curry at a Thai restaurant" onerror="this.remove()"></span>
+          <span class="ph" style="--x:-6px;--y:12px;--r:-4deg;--hx:42px;--hy:-42px;--hr:3deg">&#128138;<img src="assets/offline/food-6.jpg" alt="My morning supplements: aloe vera, Brazil nuts, turmeric, vitamin B, vitamin D, omega-3s and a probiotic" onerror="this.remove()"></span>
+          <span class="ph" style="--x:0px;--y:4px;--r:2deg;--hx:-42px;--hy:-42px;--hr:-3deg">&#127819;<img src="assets/offline/food-4.jpg" alt="An açaí bowl with strawberries, blueberries and banana on the beach" onerror="this.remove()"></span>
+          <span class="ph" style="--x:4px;--y:-2px;--r:-1deg;--hx:0px;--hy:-46px;--hr:0deg">&#127836;<img src="assets/offline/food-7.jpg" alt="Two bowls of vegan ramen with kabocha squash, shiitake mushrooms and crispy kale" onerror="this.remove()"></span>
+          <span class="hob-title">Healthy food<small>vegan ramen &middot; fruit &middot; supplements</small></span>
+        </button>
+      </div>
+
+      <div class="hob t-cream">
+        <button class="stack" type="button" aria-label="Show pilates and yoga photos">
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fbefd6,#f1dcb4);--x:0px;--y:4px;--r:-3deg;--hx:0px;--hy:-36px;--hr:0deg">&#127807;<img src="assets/offline/pilates-3.jpg" alt="Reformer Pilates studio glowing in blue light" onerror="this.remove()"></span>
+          <span class="hob-title">Pilates &amp; Yoga</span>
+        </button>
+      </div>
+
+      <div class="hob t-lilac music">
+        <a class="stack" href="https://open.spotify.com/user/megan50050" target="_blank" rel="noopener" aria-label="Open my Spotify">
+          <span class="ph" style="--ph-bg:linear-gradient(150deg,#e8dcf6,#cdb9e8);--x:-56px;--y:-6px;--r:-9deg;--hx:-92px;--hy:-30px;--hr:-12deg"><img src="assets/offline/music-1.jpg" alt="" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(150deg,#f9d9e3,#eeb5c7);--x:52px;--y:-4px;--r:9deg;--hx:92px;--hy:-28px;--hr:12deg"><img src="assets/offline/music-3.jpg" alt="" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(150deg,#dbe6f8,#b9cbee);--x:0px;--y:-16px;--r:1deg;--hx:0px;--hy:-42px;--hr:0deg"><img src="assets/offline/music-2.jpg" alt="My DJ controller and headphones under blue light" onerror="this.remove()"></span>
+          <span class="hob-title">Music &amp; DJing<small class="spotify-cta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.58 14.42a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.57-1.04 8.5-.59 11.66 1.34.35.21.46.67.25 1.03Zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.23-1.98-8.15-2.55-11.96-1.39a.94.94 0 1 1-.55-1.79c4.36-1.33 9.79-.69 13.49 1.58.44.27.58.85.31 1.29Zm.13-3.4C14.31 7.45 7.92 7.24 4.22 8.36a1.12 1.12 0 1 1-.65-2.15c4.25-1.29 11.31-1.04 15.76 1.6a1.12 1.12 0 0 1-1.15 1.94Z"/></svg>Check out my Spotify</small></span>
+        </a>
+      </div>
+
+      <div class="hob t-sage">
+        <button class="stack" type="button" aria-label="Show hiking photos">
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e1efdb,#bfd9b4);--x:-38px;--y:-8px;--r:-9deg;--hx:-98px;--hy:-18px;--hr:-8deg">&#127748;<img src="assets/offline/hiking-3.jpg" alt="A grove of tall redwoods with ferns" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e1efdb,#bfd9b4);--x:36px;--y:-12px;--r:8deg;--hx:98px;--hy:-16px;--hr:8deg">&#129406;<img src="assets/offline/hiking-4.jpg" alt="A rocky hillside above bougainvillea on a sunny trail" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e1efdb,#bfd9b4);--x:0px;--y:18px;--r:2deg;--hx:0px;--hy:-36px;--hr:1deg">&#9968;&#65039;<img src="assets/offline/hiking-1.jpg" alt="Tall pines against a bright blue sky with white wildflowers" onerror="this.remove()"></span>
+          <span class="hob-title">Hiking</span>
+        </button>
+      </div>
+
+      <div class="hob t-peach">
+        <button class="stack" type="button" aria-label="Show car photos">
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde3d3,#f6c7ad);--x:-20px;--y:-6px;--r:-7deg;--hx:-54px;--hy:-30px;--hr:-5deg">&#127950;&#65039;<img src="assets/offline/cars-1.jpg" alt="A red Ferrari 488 parked on the street" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde3d3,#f6c7ad);--x:18px;--y:8px;--r:4deg;--hx:54px;--hy:-30px;--hr:5deg">&#127937;<img src="assets/offline/cars-3.jpg" alt="Inside my Tesla" onerror="this.remove()"></span>
+          <span class="hob-title">Cars</span>
+        </button>
+      </div>
+
+      <div class="hob t-rose flowers">
+        <button class="stack" type="button" aria-label="Show flower photos">
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde0e0,#f6c1c4);--x:-38px;--y:-8px;--r:-9deg;--hx:-100px;--hy:-22px;--hr:-8deg">&#127799;<img src="assets/offline/flowers-1.jpg" alt="Red roses in a terraced rose garden with a wooden pergola" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde0e0,#f6c1c4);--x:36px;--y:-12px;--r:8deg;--hx:100px;--hy:-22px;--hr:8deg">&#127804;<img src="assets/offline/flowers-2.jpg" alt="Bright pink bougainvillea against a blue sky" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde0e0,#f6c1c4);--x:-26px;--y:16px;--r:6deg;--hx:-50px;--hy:-34px;--hr:-4deg">&#127800;<img src="assets/offline/flowers-5.jpg" alt="Clusters of hot pink geraniums in the sun" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde0e0,#f6c1c4);--x:28px;--y:14px;--r:-6deg;--hx:50px;--hy:-34px;--hr:4deg">&#127802;<img src="assets/offline/flowers-3.jpg" alt="Orange clivia blooming below the California Tower in Balboa Park" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde0e0,#f6c1c4);--x:0px;--y:4px;--r:2deg;--hx:0px;--hy:-42px;--hr:0deg">&#127801;<img src="assets/offline/flowers-4.jpg" alt="A bright red rose in full bloom" onerror="this.remove()"></span>
+          <span class="hob-title">Pretty flowers</span>
+        </button>
+      </div>
+
+      <div class="hob t-mist places">
+        <button class="stack" type="button" aria-label="Show my travel photos">
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e3edf5,#c3d6e6);--x:-72px;--y:-6px;--r:-12deg;--k:-1;--hy:-12px;--hr:-7deg">&#127800;<img src="assets/offline/places-3.jpg" alt="Magnolias in bloom on the UC Berkeley campus" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e3edf5,#c3d6e6);--x:70px;--y:-4px;--r:11deg;--k:1;--hy:-12px;--hr:7deg">&#127468;&#127463;<img src="assets/offline/places-2.jpg" alt="Tower Bridge in London" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e3edf5,#c3d6e6);--x:-52px;--y:-2px;--r:-9deg;--k:-.75;--hy:-22px;--hr:-5deg">&#128059;<img src="assets/offline/places-1.jpg" alt="The Biochemistry building at UC Berkeley" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e3edf5,#c3d6e6);--x:50px;--y:2px;--r:8deg;--k:.75;--hy:-22px;--hr:5deg">&#127482;&#127480;<img src="assets/offline/places-7.jpg" alt="An American flag on the ferry leaving Catalina Island" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e3edf5,#c3d6e6);--x:-32px;--y:4px;--r:-6deg;--k:-.5;--hy:-30px;--hr:-3deg">&#127963;&#65039;<img src="assets/offline/places-8.jpg" alt="Doe Library and the Campanile at UC Berkeley" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e3edf5,#c3d6e6);--x:30px;--y:6px;--r:5deg;--k:.5;--hy:-30px;--hr:3deg">&#127796;<img src="assets/offline/places-5.jpg" alt="Palm trees along the waterfront in Avalon on Catalina Island" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e3edf5,#c3d6e6);--x:-12px;--y:8px;--r:-3deg;--k:-.25;--hy:-36px;--hr:-1deg">&#127753;<img src="assets/offline/places-4.jpg" alt="Coastal trail overlooking San Francisco" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e3edf5,#c3d6e6);--x:-4px;--y:10px;--r:-2deg;--k:0;--hy:-40px;--hr:0deg">&#128506;&#65039;<img src="assets/offline/places-9.jpg" alt="Map of Santa Catalina Island with Avalon pinned" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#e3edf5,#c3d6e6);--x:6px;--y:14px;--r:1deg;--k:.25;--hy:-36px;--hr:1deg">&#9973;<img src="assets/offline/places-6.jpg" alt="Boats in the turquoise harbor at Avalon on Catalina Island" onerror="this.remove()"></span>
+          <span class="hob-title">Traveling<small>Berkeley &middot; San Francisco &middot; Catalina &middot; London</small></span>
+        </button>
+      </div>
+    </div>
+
+    <section class="reads" aria-labelledby="reads-title">
+      <h3 id="reads-title">My favorite <em>reads</em></h3>
+      <div class="shelf">
+        <a class="book" href="https://peterattiamd.com/outlive/" target="_blank" rel="noopener">
+          <img src="assets/books/outlive.jpg" alt="Outlive book cover" loading="lazy">
+          <div class="book-title">Outlive</div>
+          <div class="book-author">Peter Attia, MD</div>
+        </a>
+        <a class="book" href="https://www.drshefali.com/books/" target="_blank" rel="noopener">
+          <img src="assets/books/radical-awakening.jpg" alt="A Radical Awakening book cover" loading="lazy">
+          <div class="book-title">A Radical Awakening</div>
+          <div class="book-author">Dr. Shefali Tsabary</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="reads" aria-labelledby="pods-title">
+      <h3 id="pods-title">My favorite <em>podcasts</em></h3>
+      <div class="shelf">
+        <a class="book pod" href="https://www.founderspodcast.com/" target="_blank" rel="noopener">
+          <img src="assets/podcasts/founders.jpg" alt="Founders podcast cover" loading="lazy">
+          <div class="book-title">Founders</div>
+          <div class="book-author">David Senra</div>
+        </a>
+        <a class="book pod" href="https://www.hubermanlab.com/podcast" target="_blank" rel="noopener">
+          <img src="assets/podcasts/huberman-lab.jpg" alt="Huberman Lab podcast cover" loading="lazy">
+          <div class="book-title">Huberman Lab</div>
+          <div class="book-author">Andrew Huberman</div>
+        </a>
+      </div>
+    </section>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lb-close" type="button" aria-label="Close photo">&times;</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Previous photo">&lsaquo;</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="lb-nav lb-next" type="button" aria-label="Next photo">&rsaquo;</button>
+</div>
+
+<div class="social-dock" aria-label="Social links">
+  <a href="https://www.linkedin.com/in/megan-gadiparthy" target="_blank" rel="noopener" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.83v1.5h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.13v5.43h-4v-4.82c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.9h-4v-11Z"/></svg>
+  </a>
+  <a href="https://github.com/megangadiparthy" target="_blank" rel="noopener" aria-label="GitHub">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+  </a>
+  <a class="mail" href="mailto:megan.gadiparthy@berkeley.edu" aria-label="Email">
+    <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+  </a>
+</div>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <h2>Let's build something<br><em>that keeps people well.</em></h2>
+    <div class="foot-links">
+      <a href="mailto:megan.gadiparthy@berkeley.edu">Email</a>
+      <a href="https://github.com/megangadiparthy" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/megan-gadiparthy" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://healthvela.com" target="_blank" rel="noopener">Vela</a>
+    </div>
+  </div>
+  <div class="foot-small">&copy; <span id="yr"></span> Megan Gadiparthy</div>
+</footer>
+
+<script>
+(function () {
+  var tabs = ['home', 'experience', 'building', 'writing', 'offline'];
+  var indicator = document.getElementById('nav-indicator');
+
+  function moveIndicator() {
+    var active = document.querySelector('.tab-links a.active');
+    if (!active) return;
+    var parent = active.closest('.tab-links').getBoundingClientRect();
+    var r = active.getBoundingClientRect();
+    indicator.style.left = (r.left - parent.left + 14) + 'px';
+    indicator.style.width = (r.width - 28) + 'px';
+  }
+
+  function showTab(name, push) {
+    if (tabs.indexOf(name) === -1) name = 'home';
+    document.querySelectorAll('.tab-panel').forEach(function (p) {
+      p.classList.toggle('active', p.id === 'panel-' + name);
+    });
+    document.querySelectorAll('.tab-links a').forEach(function (a) {
+      a.classList.toggle('active', a.dataset.tab === name);
+    });
+    document.body.classList.toggle('on-home', name === 'home');
+    moveIndicator();
+    if (push !== false) history.pushState(null, '', name === 'home' ? location.pathname : '#' + name);
+    window.scrollTo(0, 0);
+  }
+
+  document.querySelectorAll('[data-tab]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      showTab(el.dataset.tab);
+    });
+  });
+  window.addEventListener('popstate', function () { showTab(location.hash.slice(1), false); });
+  window.addEventListener('resize', moveIndicator);
+  showTab(location.hash.slice(1), false);
+  if (document.fonts) document.fonts.ready.then(moveIndicator);
+
+  var roles = document.querySelectorAll('.role');
+  var ri = 0;
+  setInterval(function () {
+    roles.forEach(function (r, i) { r.classList.toggle('lit', i === ri); });
+    ri = (ri + 1) % roles.length;
+  }, 1600);
+
+  var courses = document.getElementById('courses');
+  courses.querySelector('.courses-trigger').addEventListener('click', function () {
+    var open = courses.classList.toggle('open');
+    this.setAttribute('aria-expanded', open);
+  });
+
+  var lb = document.getElementById('lb');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('figcaption');
+  var lbPrev = lb.querySelector('.lb-prev');
+  var lbNext = lb.querySelector('.lb-next');
+  var lbList = [], lbIdx = 0, lbReturn = null, pointerType = 'mouse';
+
+  function lbShow(i) {
+    lbIdx = (i + lbList.length) % lbList.length;
+    var src = lbList[lbIdx];
+    lbImg.src = src.getAttribute('src');
+    lbImg.alt = src.alt;
+    lbCap.textContent = src.alt;
+    lbPrev.hidden = lbNext.hidden = lbList.length < 2;
+  }
+  function lbOpen(list, i) {
+    lbList = list;
+    lbReturn = document.activeElement;
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lbShow(i);
+    requestAnimationFrame(function () { lb.classList.add('show'); });
+    lb.querySelector('.lb-close').focus();
+  }
+  function lbClose() {
+    lb.classList.remove('show');
+    document.body.style.overflow = '';
+    setTimeout(function () { lb.hidden = true; }, 250);
+    if (lbReturn) lbReturn.focus();
+  }
+  lb.addEventListener('click', function (e) {
+    if (e.target === lb || e.target.closest('.lb-close')) lbClose();
+    else if (e.target.closest('.lb-prev')) lbShow(lbIdx - 1);
+    else if (e.target.closest('.lb-next')) lbShow(lbIdx + 1);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') lbClose();
+    else if (e.key === 'ArrowLeft') lbShow(lbIdx - 1);
+    else if (e.key === 'ArrowRight') lbShow(lbIdx + 1);
+  });
+  document.addEventListener('pointerdown', function (e) { pointerType = e.pointerType; }, true);
+
+  document.querySelectorAll('button.stack').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      var card = btn.closest('.hob');
+      var spread = card.classList.contains('is-open') || (pointerType === 'mouse' && card.matches(':hover'));
+      var photos = Array.prototype.slice.call(card.querySelectorAll('.ph img'));
+      var hit = e.target.closest('.ph');
+      var target = hit && hit.querySelector('img');
+      if (spread && photos.length && (target || e.detail === 0)) {
+        photos.sort(function (a, b) { return a.getBoundingClientRect().left - b.getBoundingClientRect().left; });
+        lbOpen(photos, target ? photos.indexOf(target) : 0);
+        return;
+      }
+      var open = !card.classList.contains('is-open');
+      document.querySelectorAll('.hob.is-open').forEach(function (c) {
+        c.classList.remove('is-open');
+        c.querySelector('.stack').setAttribute('aria-expanded', 'false');
+      });
+      card.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
