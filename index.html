@@ -199,6 +199,12 @@ a{color:inherit}
 .exp-loc{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.04em}
 .exp-title{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
 .exp-role{font-family:var(--serif);font-size:1.35rem;font-style:italic;font-weight:300;color:var(--muted);margin-bottom:1.1rem}
+.cert-list{list-style:none;display:flex;flex-direction:column}
+.cert-list li{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid var(--rule)}
+.cert-list li:first-child{padding-top:0}
+.cert-list li:last-child{border-bottom:0;padding-bottom:0}
+.cert-name{font-family:var(--serif);font-size:1.15rem;font-style:italic;font-weight:300}
+.cert-meta{font-family:var(--mono);font-size:9px;letter-spacing:.04em;color:var(--muted)}
 .exp-more{display:inline-block;margin-top:1rem;font-family:var(--mono);font-size:9px;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--accent-glow),.3);cursor:pointer;background:none;border-top:0;border-left:0;border-right:0;padding:0 0 1px}
 
 .arsenal{background:var(--ink);padding:6rem 5rem 6.5rem;background-image:radial-gradient(rgba(247,245,240,.1) 1px,transparent 1.4px);background-size:42px 42px}
@@ -448,7 +454,7 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
           <img class="edu-seal" src="assets/berkeley-seal.svg" alt="UC Berkeley seal">
           <div>
             <div class="edu-school">UC Berkeley<span class="bear" aria-hidden="true">&#128059;</span><img class="bear-pop" src="assets/berkeley-bear.jpg" alt="" loading="lazy"></div>
-            <div class="edu-degree">B.A. Data Science &amp; Molecular Cell Biology<br>Class of 2027</div>
+            <div class="edu-degree">B.A. Data Science &amp; Molecular and Cell Biology<br>Class of 2027</div>
           </div>
         </div>
         <div class="courses" id="courses">
@@ -530,7 +536,7 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
       <span>Building <b>Alta</b></span>
       <span>iOS at <b>Berkeley Mobile</b></span>
       <span>Studying at <b>UC Berkeley</b></span>
-      <span>Previously <b>SiriusXM</b></span>
+      <span>Previously <b>SiriusXM</b> &amp; <b>Fusion Fund</b></span>
     </div>
   </div>
 </section>
@@ -545,35 +551,14 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
 
     <div class="exp-entry">
       <div class="exp-left">
-        <div class="exp-logo"><img src="assets/logos/siriusxm.svg" alt="SiriusXM logo"></div>
-        <div class="exp-co">SiriusXM</div>
-        <div class="exp-period">Jun &ndash; Aug 2026</div>
-        <div class="exp-loc">iOS Engineering Intern</div>
-      </div>
-      <div>
-        <div class="exp-title">SiriusXM</div>
-        <div class="exp-role">iOS Software Engineer Intern &mdash; Connect Mobile SDK</div>
-        <ul class="res-list">
-          <li><strong>Built mainly on iOS in Swift</strong>, including work on the OmniSecure iOS app.</li>
-          <li><strong>Built across platforms</strong> &mdash; the Tesla integration, an Apple Watch app, and a sample rental car app for the SDK.</li>
-          <li><strong>Architected and deployed cloud-native services</strong> on AWS (Lambda, ECS, DynamoDB, S3) for the Connect Mobile SDK team's proof-of-concept funnel, expanding SiriusXM audio into new market verticals.</li>
-          <li><strong>Engineered high-concurrency features</strong> from inception to delivery, with GitHub Actions CI/CD pipelines keeping the architecture reliable and fast at scale.</li>
-          <li><strong>Presented my ideas weekly</strong> to the team and took part in daily standups.</li>
-        </ul>
-        <div class="tags"><span class="tag">Swift</span><span class="tag">iOS</span><span class="tag">watchOS</span><span class="tag">AWS Lambda</span><span class="tag">ECS</span><span class="tag">DynamoDB</span><span class="tag">S3</span><span class="tag">GitHub Actions</span></div>
-      </div>
-    </div>
-
-    <div class="exp-entry">
-      <div class="exp-left">
         <div class="exp-logo bleed"><img src="assets/logos/vela.png" alt="Vela Health logo"></div>
         <div class="exp-co">Vela Health</div>
-        <div class="exp-period">Jul 2026 &ndash; Present</div>
+        <div class="exp-period">Aug 2026 &ndash; Present</div>
         <div class="exp-loc">Berkeley, CA</div>
       </div>
       <div>
         <div class="exp-title">Vela</div>
-        <div class="exp-role">CEO &amp; Engineer</div>
+        <div class="exp-role">Founder &amp; CEO</div>
         <ul class="res-list">
           <li><strong>Architected normalized PostgreSQL schemas</strong> for health metrics, optimizing queries for high-concurrency analytics and longitudinal tracking of each user's data.</li>
           <li><strong>Scaled a full-stack platform</strong> (React, Node.js, PostgreSQL) on AWS, with data models designed to support 10,000+ active users.</li>
@@ -592,12 +577,60 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
       </div>
       <div>
         <div class="exp-title">Berkeley Mobile Developers</div>
-        <div class="exp-role">iOS Developer</div>
+        <div class="exp-role">iOS Developer &mdash; The official UC Berkeley iOS app</div>
         <ul class="res-list">
           <li><strong>Cut network overhead by 30%</strong> by building a persistent CoreData caching layer and URLSession request batching, improving offline use for 3,000 daily active users.</li>
           <li><strong>Ship production features with 15+ engineers</strong> in an Agile team, integrating third-party APIs with robust error handling and fallbacks.</li>
         </ul>
         <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">CoreData</span><span class="tag">URLSession</span><span class="tag">REST APIs</span></div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-left">
+        <div class="exp-logo"><img src="assets/logos/fusion-fund.png" alt="Fusion Fund logo"></div>
+        <div class="exp-co">Fusion Fund</div>
+        <div class="exp-period">Jun &ndash; Aug 2026</div>
+        <div class="exp-loc">Palo Alto, CA</div>
+      </div>
+      <div>
+        <div class="exp-title">Fusion Fund</div>
+        <div class="exp-role">Venture Fellow</div>
+        <div class="tags"><span class="tag">Healthcare AI</span><span class="tag">Enterprise AI</span><span class="tag">Deep Tech</span></div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-left">
+        <div class="exp-logo"><img src="assets/logos/siriusxm.svg" alt="SiriusXM logo"></div>
+        <div class="exp-co">SiriusXM</div>
+        <div class="exp-period">May &ndash; Aug 2026</div>
+        <div class="exp-loc">New York, NY</div>
+      </div>
+      <div>
+        <div class="exp-title">SiriusXM</div>
+        <div class="exp-role">Software Engineer Intern &mdash; Mobile SDK, iOS</div>
+        <ul class="res-list">
+          <li><strong>Built mainly on iOS in Swift</strong>, including work on the OmniSecure iOS app.</li>
+          <li><strong>Built across platforms</strong> &mdash; the Tesla integration, an Apple Watch app, and a sample rental car app for the SDK.</li>
+          <li><strong>Architected and deployed cloud-native services</strong> on AWS (Lambda, ECS, DynamoDB, S3) for the Connect Mobile SDK team's proof-of-concept funnel, expanding SiriusXM audio into new market verticals.</li>
+          <li><strong>Engineered high-concurrency features</strong> from inception to delivery, with GitHub Actions CI/CD pipelines keeping the architecture reliable and fast at scale.</li>
+          <li><strong>Presented my ideas weekly</strong> to the team and took part in daily standups.</li>
+        </ul>
+        <div class="tags"><span class="tag">Swift</span><span class="tag">iOS</span><span class="tag">watchOS</span><span class="tag">AWS Lambda</span><span class="tag">ECS</span><span class="tag">DynamoDB</span><span class="tag">S3</span><span class="tag">GitHub Actions</span></div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-left">
+        <div class="exp-logo bleed"><img src="assets/berkeley-seal.svg" alt="UC Berkeley seal"></div>
+        <div class="exp-co">UC Berkeley</div>
+        <div class="exp-period">May 2025 &ndash; Jan 2026</div>
+        <div class="exp-loc">Berkeley, CA</div>
+      </div>
+      <div>
+        <div class="exp-title">MD Mindspace</div>
+        <div class="exp-role">Course Instructor &mdash; Future of Medicine</div>
       </div>
     </div>
 
@@ -614,9 +647,21 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
         <ul class="res-list">
           <li><strong>Modeled nonlinear insulin signaling dynamics</strong> with systems of ordinary differential equations, using parametric sensitivity analysis to find critical regulatory nodes and predict small-molecule inhibitors of breast cancer cell proliferation.</li>
           <li><strong>Designed and maintained data ingestion workflows</strong> for the computational models, keeping data clean and consistent for downstream analysis.</li>
+          <li><strong>Published</strong> &ldquo;Exercise and Breast Cancer: Exploring Dopamine, Insulin and Estrogen Pathways&rdquo; (ULAB, Oct 2024).</li>
         </ul>
         <div class="tags"><span class="tag">Python</span><span class="tag">ODE modeling</span><span class="tag">Sensitivity analysis</span><span class="tag">Systems biology</span></div>
       </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-left">
+        <div class="exp-co">Certifications</div>
+      </div>
+      <ul class="cert-list">
+        <li><span class="cert-name">Human Nutrition Certification</span><span class="cert-meta">Stanford School of Medicine &middot; Sep &ndash; Nov 2025</span></li>
+        <li><span class="cert-name">Certificate in Entrepreneurship &amp; Technology</span><span class="cert-meta">UC Berkeley SCET &middot; Jan 2026</span></li>
+        <li><span class="cert-name">Adult &amp; Pediatric CPR/AED</span><span class="cert-meta">American Heart Association &middot; May 2026</span></li>
+      </ul>
     </div>
 
   </div>
@@ -700,10 +745,10 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
       <div class="res-left">
         <div class="res-logo"><img src="assets/logos/vela.png" alt="Vela Health logo"></div>
         <div>
-          <div class="res-role">CEO &amp; Engineer</div>
+          <div class="res-role">Founder &amp; CEO</div>
           <div class="res-org">Vela Health</div>
         </div>
-        <div class="res-period">Jul 2026 &ndash; Present<br>Berkeley, CA</div>
+        <div class="res-period">Aug 2026 &ndash; Present<br>Berkeley, CA</div>
         <a class="res-link" href="https://healthvela.com" target="_blank" rel="noopener">Visit Vela &#8599;</a>
         <div class="metrics">
           <div class="met"><div class="met-val">10k+</div><div class="met-label">user scale</div></div>
@@ -857,7 +902,8 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
 
       <div class="hob t-cream">
         <button class="stack" type="button" aria-label="Show pilates and yoga photos">
-          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fbefd6,#f1dcb4);--x:0px;--y:4px;--r:-3deg;--hx:0px;--hy:-36px;--hr:0deg">&#127807;<img src="assets/offline/pilates-3.jpg" alt="Reformer Pilates studio glowing in blue light" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fbefd6,#f1dcb4);--x:-20px;--y:-6px;--r:-7deg;--hx:-54px;--hy:-30px;--hr:-5deg">&#127801;<img src="assets/offline/pilates-lotus.jpg" alt="A pink lotus flower floating on still water" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fbefd6,#f1dcb4);--x:18px;--y:8px;--r:4deg;--hx:54px;--hy:-30px;--hr:5deg">&#127807;<img src="assets/offline/pilates-3.jpg" alt="Reformer Pilates studio glowing in blue light" onerror="this.remove()"></span>
           <span class="hob-title">Pilates &amp; Yoga</span>
         </button>
       </div>
