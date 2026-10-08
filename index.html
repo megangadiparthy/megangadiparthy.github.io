@@ -186,25 +186,39 @@ a{color:inherit}
 .res-list li strong{color:var(--ink);font-weight:500}
 
 /* ── Experience ── */
-.exp-entry{padding:2.75rem 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
-.exp-entry:last-of-type{border-bottom:1px solid var(--rule)}
-.exp-left{display:flex;flex-direction:column;gap:.7rem}
-.exp-logo{width:52px;height:52px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;background:#fff;font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--accent);margin-bottom:.4rem;transition:transform .4s var(--ease);overflow:hidden;padding:7px}
+.exp-list{--lg:56px;--eg:2.5rem;--sp:2.75rem}
+.exp-entry{position:relative;display:grid;grid-template-columns:var(--lg) minmax(0,1fr);gap:var(--eg);align-items:start}
+.exp-entry:not(:last-child){margin-bottom:var(--sp)}
+.exp-entry:not(:last-child)::before{content:'';position:absolute;left:calc(var(--lg) / 2 - .5px);top:calc(var(--lg) + 10px);bottom:calc(10px - var(--sp));width:1px;background:var(--rule)}
+.exp-entry:not(:last-child) .exp-body{padding-bottom:var(--sp);border-bottom:1px solid var(--rule)}
+.exp-left{position:relative;z-index:1}
+.exp-logo{width:var(--lg);height:var(--lg);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;background:#fff;transition:transform .4s var(--ease);overflow:hidden;padding:8px}
 .exp-logo img{width:100%;height:100%;object-fit:contain;display:block}
 .exp-logo.bleed{padding:0}
 .exp-logo.fill{padding:0;border-radius:12px;border:none;box-shadow:0 2px 8px rgba(34,29,39,.12)}
 .exp-entry:hover .exp-logo{transform:rotate(-6deg) scale(1.05)}
-.exp-co{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.exp-period{font-family:var(--mono);font-size:10px;color:var(--muted)}
-.exp-loc{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.04em}
-.exp-title{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
-.exp-role{font-family:var(--serif);font-size:1.35rem;font-style:italic;font-weight:300;color:var(--muted);margin-bottom:1.1rem}
-.cert-list{list-style:none;display:flex;flex-direction:column}
-.cert-list li{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid var(--rule)}
-.cert-list li:first-child{padding-top:0}
-.cert-list li:last-child{border-bottom:0;padding-bottom:0}
-.cert-name{font-family:var(--serif);font-size:1.15rem;font-style:italic;font-weight:300}
-.cert-meta{font-family:var(--mono);font-size:9px;letter-spacing:.04em;color:var(--muted)}
+.exp-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.75rem 2rem;margin-bottom:1rem}
+.exp-title{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.exp-role{font-family:var(--serif);font-size:1.6rem;font-style:italic;font-weight:400;line-height:1.15;color:var(--ink)}
+.exp-when{display:flex;flex-direction:column;align-items:flex-end;gap:7px;padding-top:2px;flex-shrink:0}
+.exp-period{display:flex;align-items:center;gap:.65rem;font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--ink);white-space:nowrap}
+.exp-loc{font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--muted);white-space:nowrap}
+.exp-now{display:inline-flex;align-items:center;gap:5px;padding:3px 8px 3px 7px;border:1px solid rgba(var(--accent-glow),.35);border-radius:99px;background:rgba(var(--accent-glow),.06);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.exp-now::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);animation:blink 1.8s ease-in-out infinite}
+.exp-desc{font-family:var(--serif);font-size:1.08rem;font-weight:300;line-height:1.6;color:var(--muted);margin-bottom:1rem}
+.exp-body .res-list{margin-bottom:1.25rem}
+.certs{margin-top:var(--sp,2.75rem);padding-top:2.75rem;border-top:1px solid var(--rule)}
+.certs-title{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
+.cert-list{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.cert-list li{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.25rem;border:1px solid var(--rule);background:rgba(255,255,255,.45)}
+.cert-logo{flex:0 0 48px;width:48px;height:48px;display:flex;align-items:center;justify-content:center;padding:6px;overflow:hidden;border:1px solid var(--rule);background:#fff;transition:transform .4s var(--ease)}
+.cert-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.cert-logo.bleed{padding:0}
+.cert-logo.bleed img{transform:scale(1.12)}
+.cert-list li:hover .cert-logo{transform:rotate(-6deg) scale(1.05)}
+.cert-text{display:flex;flex-direction:column;gap:.5rem;min-width:0}
+.cert-name{font-family:var(--serif);font-size:1.2rem;font-style:italic;font-weight:400;line-height:1.25}
+.cert-meta{font-family:var(--mono);font-size:9px;letter-spacing:.04em;color:var(--muted);line-height:1.5}
 .exp-more{display:inline-block;margin-top:1rem;font-family:var(--mono);font-size:9px;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(var(--accent-glow),.3);cursor:pointer;background:none;border-top:0;border-left:0;border-right:0;padding:0 0 1px}
 
 .arsenal{background:var(--ink);padding:6rem 5rem 6.5rem;background-image:radial-gradient(rgba(247,245,240,.1) 1px,transparent 1.4px);background-size:42px 42px}
@@ -293,7 +307,8 @@ a{color:inherit}
 .music .ph{width:84px;height:84px;margin:-42px 0 0 -42px;border-width:4px}
 .music .ph::before{content:'';position:absolute;inset:16%;border-radius:50%;background:radial-gradient(circle,#f4e9f7 0 9%,#2d2430 10% 38%,#3a2f3f 39% 41%,#2d2430 42% 70%,transparent 71%)}
 .hob.music:hover .ph,.hob.music.is-open .ph{width:100px;height:100px;margin:-50px 0 0 -50px}
-.spotify-cta{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-family:var(--mono);font-style:normal;font-size:9px;letter-spacing:.08em;color:#5b4452;text-shadow:none}
+.spotify-cta{position:absolute;z-index:6;left:50%;top:68%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:#5b4452;transition:top .55s var(--ease)}
+.hob.music:hover .spotify-cta,.hob.music.is-open .spotify-cta,.music .stack:focus-visible .spotify-cta{top:63%}
 .spotify-cta svg{width:14px;height:14px;fill:#1DB954;transition:transform .3s var(--ease)}
 .hob.music:hover .spotify-cta svg{transform:scale(1.2) rotate(8deg)}
 
@@ -334,8 +349,8 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
   .hero-left{padding:10vh 2rem 4vh 2.5rem}
   .hero-right{padding:calc(3vh + var(--ph) * .14) 1.25rem 3vh}
   .feat,.hob-grid{grid-template-columns:1fr 1fr}
-  .wgroup,.exp-entry{grid-template-columns:1fr}
-  .exp-entry{gap:1.25rem}
+  .wgroup{grid-template-columns:1fr}
+  .exp-list{--eg:1.5rem}
   .arsenal{padding:4rem 2rem 4.5rem}
   .wgroup{gap:1rem}
   #panel-building .psec{padding:1.75rem 2rem 3rem}
@@ -369,6 +384,12 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
   .edu-school{font-size:clamp(1.9rem,8vw,2.6rem)}
   .edu-seal{width:60px;height:60px}
   .edu-degree{font-size:10px}
+  .exp-list{--lg:42px;--eg:1rem;--sp:2.25rem}
+  .exp-logo{padding:6px}
+  .exp-head{flex-direction:column}
+  .exp-when{align-items:flex-start}
+  .exp-role{font-size:1.4rem}
+  .cert-list{grid-template-columns:1fr}
 }
 @media(max-width:640px){
   .site-nav-inner{flex-wrap:wrap;height:auto;padding:.6rem 1rem;gap:.25rem}
@@ -549,16 +570,22 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
       <span class="sec-note"><a href="https://www.linkedin.com/in/megan-gadiparthy" target="_blank" rel="noopener">LinkedIn &#8599;</a></span>
     </div>
 
+    <div class="exp-list">
     <div class="exp-entry">
       <div class="exp-left">
         <div class="exp-logo bleed"><img src="assets/logos/vela.png" alt="Vela Health logo"></div>
-        <div class="exp-co">Vela Health</div>
-        <div class="exp-period">Aug 2026 &ndash; Present</div>
-        <div class="exp-loc">Berkeley, CA</div>
       </div>
-      <div>
-        <div class="exp-title">Vela</div>
-        <div class="exp-role">Founder &amp; CEO</div>
+      <div class="exp-body">
+        <div class="exp-head">
+          <div>
+            <div class="exp-title">Vela Health</div>
+            <div class="exp-role">Founder &amp; CEO</div>
+          </div>
+          <div class="exp-when">
+            <div class="exp-period"><span class="exp-now">Current</span>Aug 2026 &ndash; Present</div>
+            <div class="exp-loc">Berkeley, CA</div>
+          </div>
+        </div>
         <ul class="res-list">
           <li><strong>Architected normalized PostgreSQL schemas</strong> for health metrics, optimizing queries for high-concurrency analytics and longitudinal tracking of each user's data.</li>
           <li><strong>Scaled a full-stack platform</strong> (React, Node.js, PostgreSQL) on AWS, with data models designed to support 10,000+ active users.</li>
@@ -571,13 +598,19 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
     <div class="exp-entry">
       <div class="exp-left">
         <div class="exp-logo fill"><img src="assets/logos/berkeley-mobile.png" alt="Berkeley Mobile app icon"></div>
-        <div class="exp-co">Berkeley Mobile</div>
-        <div class="exp-period">Jan 2026 &ndash; Present</div>
-        <div class="exp-loc">Berkeley, CA</div>
       </div>
-      <div>
-        <div class="exp-title">Berkeley Mobile Developers</div>
-        <div class="exp-role">iOS Developer &mdash; The official UC Berkeley iOS app</div>
+      <div class="exp-body">
+        <div class="exp-head">
+          <div>
+            <div class="exp-title">Berkeley Mobile</div>
+            <div class="exp-role">iOS Developer</div>
+          </div>
+          <div class="exp-when">
+            <div class="exp-period"><span class="exp-now">Current</span>Jan 2026 &ndash; Present</div>
+            <div class="exp-loc">Berkeley, CA &middot; Part-time</div>
+          </div>
+        </div>
+        <p class="exp-desc">The official UC Berkeley iOS app.</p>
         <ul class="res-list">
           <li><strong>Cut network overhead by 30%</strong> by building a persistent CoreData caching layer and URLSession request batching, improving offline use for 3,000 daily active users.</li>
           <li><strong>Ship production features with 15+ engineers</strong> in an Agile team, integrating third-party APIs with robust error handling and fallbacks.</li>
@@ -589,13 +622,19 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
     <div class="exp-entry">
       <div class="exp-left">
         <div class="exp-logo"><img src="assets/logos/fusion-fund.png" alt="Fusion Fund logo"></div>
-        <div class="exp-co">Fusion Fund</div>
-        <div class="exp-period">Jun &ndash; Aug 2026</div>
-        <div class="exp-loc">Palo Alto, CA</div>
       </div>
-      <div>
-        <div class="exp-title">Fusion Fund</div>
-        <div class="exp-role">Venture Fellow</div>
+      <div class="exp-body">
+        <div class="exp-head">
+          <div>
+            <div class="exp-title">Fusion Fund</div>
+            <div class="exp-role">Venture Fellow</div>
+          </div>
+          <div class="exp-when">
+            <div class="exp-period">Jun &ndash; Aug 2026</div>
+            <div class="exp-loc">Palo Alto, CA &middot; Fellowship</div>
+          </div>
+        </div>
+        <p class="exp-desc">Venture fellowship at an early-stage VC firm, focused on Healthcare AI, Enterprise AI and Deep Tech.</p>
         <div class="tags"><span class="tag">Healthcare AI</span><span class="tag">Enterprise AI</span><span class="tag">Deep Tech</span></div>
       </div>
     </div>
@@ -603,13 +642,19 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
     <div class="exp-entry">
       <div class="exp-left">
         <div class="exp-logo"><img src="assets/logos/siriusxm.svg" alt="SiriusXM logo"></div>
-        <div class="exp-co">SiriusXM</div>
-        <div class="exp-period">May &ndash; Aug 2026</div>
-        <div class="exp-loc">New York, NY</div>
       </div>
-      <div>
-        <div class="exp-title">SiriusXM</div>
-        <div class="exp-role">Software Engineer Intern &mdash; Mobile SDK, iOS</div>
+      <div class="exp-body">
+        <div class="exp-head">
+          <div>
+            <div class="exp-title">SiriusXM</div>
+            <div class="exp-role">Software Engineer Intern</div>
+          </div>
+          <div class="exp-when">
+            <div class="exp-period">May &ndash; Aug 2026</div>
+            <div class="exp-loc">New York, NY &middot; Internship</div>
+          </div>
+        </div>
+        <p class="exp-desc">Mobile SDK team, with an iOS focus.</p>
         <ul class="res-list">
           <li><strong>Built mainly on iOS in Swift</strong>, including work on the OmniSecure iOS app.</li>
           <li><strong>Built across platforms</strong> &mdash; the Tesla integration, an Apple Watch app, and a sample rental car app for the SDK.</li>
@@ -624,26 +669,38 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
     <div class="exp-entry">
       <div class="exp-left">
         <div class="exp-logo bleed"><img src="assets/berkeley-seal.svg" alt="UC Berkeley seal"></div>
-        <div class="exp-co">UC Berkeley</div>
-        <div class="exp-period">May 2025 &ndash; Jan 2026</div>
-        <div class="exp-loc">Berkeley, CA</div>
       </div>
-      <div>
-        <div class="exp-title">MD Mindspace</div>
-        <div class="exp-role">Course Instructor &mdash; Future of Medicine</div>
+      <div class="exp-body">
+        <div class="exp-head">
+          <div>
+            <div class="exp-title">MD Mindspace &middot; UC Berkeley</div>
+            <div class="exp-role">Course Instructor</div>
+          </div>
+          <div class="exp-when">
+            <div class="exp-period">May 2025 &ndash; Jan 2026</div>
+            <div class="exp-loc">Berkeley, CA</div>
+          </div>
+        </div>
+        <p class="exp-desc">Taught the Future of Medicine course at UC Berkeley.</p>
       </div>
     </div>
 
     <div class="exp-entry">
       <div class="exp-left">
         <div class="exp-logo"><img src="assets/logos/ulab.png" alt="ULAB at Berkeley logo"></div>
-        <div class="exp-co">ULAB at Berkeley</div>
-        <div class="exp-period">Sep 2023 &ndash; May 2024</div>
-        <div class="exp-loc">Undergraduate Research</div>
       </div>
-      <div>
-        <div class="exp-title">Undergraduate Lab at Berkeley</div>
-        <div class="exp-role">Researcher &mdash; Insulin signaling &amp; breast cancer</div>
+      <div class="exp-body">
+        <div class="exp-head">
+          <div>
+            <div class="exp-title">Undergraduate Lab at Berkeley</div>
+            <div class="exp-role">Researcher</div>
+          </div>
+          <div class="exp-when">
+            <div class="exp-period">Sep 2023 &ndash; May 2024</div>
+            <div class="exp-loc">Berkeley, CA &middot; Research</div>
+          </div>
+        </div>
+        <p class="exp-desc">Insulin signaling and breast cancer.</p>
         <ul class="res-list">
           <li><strong>Modeled nonlinear insulin signaling dynamics</strong> with systems of ordinary differential equations, using parametric sensitivity analysis to find critical regulatory nodes and predict small-molecule inhibitors of breast cancer cell proliferation.</li>
           <li><strong>Designed and maintained data ingestion workflows</strong> for the computational models, keeping data clean and consistent for downstream analysis.</li>
@@ -653,14 +710,14 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
       </div>
     </div>
 
-    <div class="exp-entry">
-      <div class="exp-left">
-        <div class="exp-co">Certifications</div>
-      </div>
+    </div>
+
+    <div class="certs">
+      <h3 class="certs-title">Certifications</h3>
       <ul class="cert-list">
-        <li><span class="cert-name">Human Nutrition Certification</span><span class="cert-meta">Stanford School of Medicine &middot; Sep &ndash; Nov 2025</span></li>
-        <li><span class="cert-name">Certificate in Entrepreneurship &amp; Technology</span><span class="cert-meta">UC Berkeley SCET &middot; Jan 2026</span></li>
-        <li><span class="cert-name">Adult &amp; Pediatric CPR/AED</span><span class="cert-meta">American Heart Association &middot; May 2026</span></li>
+        <li><span class="cert-logo"><img src="assets/logos/stanford-medicine.svg" alt="Stanford Medicine logo"></span><span class="cert-text"><span class="cert-name">Human Nutrition Certification</span><span class="cert-meta">Stanford School of Medicine &middot; Sep &ndash; Nov 2025</span></span></li>
+        <li><span class="cert-logo bleed"><img src="assets/logos/scet.jpg" alt="Berkeley SCET logo"></span><span class="cert-text"><span class="cert-name">Certificate in Entrepreneurship &amp; Technology</span><span class="cert-meta">UC Berkeley SCET &middot; Jan 2026</span></span></li>
+        <li><span class="cert-logo"><img src="assets/logos/aha.svg" alt="American Heart Association logo"></span><span class="cert-text"><span class="cert-name">Adult &amp; Pediatric CPR/AED</span><span class="cert-meta">American Heart Association &middot; May 2026</span></span></li>
       </ul>
     </div>
 
@@ -903,7 +960,7 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
       <div class="hob t-cream">
         <button class="stack" type="button" aria-label="Show pilates and yoga photos">
           <span class="ph" style="--ph-bg:linear-gradient(160deg,#fbefd6,#f1dcb4);--x:-20px;--y:-6px;--r:-7deg;--hx:-54px;--hy:-30px;--hr:-5deg">&#127801;<img src="assets/offline/pilates-lotus.jpg" alt="A pink lotus flower floating on still water" onerror="this.remove()"></span>
-          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fbefd6,#f1dcb4);--x:18px;--y:8px;--r:4deg;--hx:54px;--hy:-30px;--hr:5deg">&#127807;<img src="assets/offline/pilates-3.jpg" alt="Reformer Pilates studio glowing in blue light" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fbefd6,#f1dcb4);--x:18px;--y:8px;--r:4deg;--hx:54px;--hy:-30px;--hr:5deg">&#127807;<img src="assets/offline/pilates-3.jpg" alt="Solidcore Pilates" onerror="this.remove()"></span>
           <span class="hob-title">Pilates &amp; Yoga</span>
         </button>
       </div>
@@ -913,7 +970,8 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
           <span class="ph" style="--ph-bg:linear-gradient(150deg,#e8dcf6,#cdb9e8);--x:-56px;--y:-6px;--r:-9deg;--hx:-92px;--hy:-30px;--hr:-12deg"><img src="assets/offline/music-1.jpg" alt="" onerror="this.remove()"></span>
           <span class="ph" style="--ph-bg:linear-gradient(150deg,#f9d9e3,#eeb5c7);--x:52px;--y:-4px;--r:9deg;--hx:92px;--hy:-28px;--hr:12deg"><img src="assets/offline/music-3.jpg" alt="" onerror="this.remove()"></span>
           <span class="ph" style="--ph-bg:linear-gradient(150deg,#dbe6f8,#b9cbee);--x:0px;--y:-16px;--r:1deg;--hx:0px;--hy:-42px;--hr:0deg"><img src="assets/offline/music-2.jpg" alt="My DJ controller and headphones under blue light" onerror="this.remove()"></span>
-          <span class="hob-title">Music &amp; DJing<small class="spotify-cta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.58 14.42a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.57-1.04 8.5-.59 11.66 1.34.35.21.46.67.25 1.03Zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.23-1.98-8.15-2.55-11.96-1.39a.94.94 0 1 1-.55-1.79c4.36-1.33 9.79-.69 13.49 1.58.44.27.58.85.31 1.29Zm.13-3.4C14.31 7.45 7.92 7.24 4.22 8.36a1.12 1.12 0 1 1-.65-2.15c4.25-1.29 11.31-1.04 15.76 1.6a1.12 1.12 0 0 1-1.15 1.94Z"/></svg>Check out my Spotify</small></span>
+          <span class="hob-title">Music &amp; DJing</span>
+          <span class="spotify-cta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.58 14.42a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.57-1.04 8.5-.59 11.66 1.34.35.21.46.67.25 1.03Zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.23-1.98-8.15-2.55-11.96-1.39a.94.94 0 1 1-.55-1.79c4.36-1.33 9.79-.69 13.49 1.58.44.27.58.85.31 1.29Zm.13-3.4C14.31 7.45 7.92 7.24 4.22 8.36a1.12 1.12 0 1 1-.65-2.15c4.25-1.29 11.31-1.04 15.76 1.6a1.12 1.12 0 0 1-1.15 1.94Z"/></svg>Check out my Spotify</span>
         </a>
       </div>
 
@@ -936,7 +994,7 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
 
       <div class="hob t-rose flowers">
         <button class="stack" type="button" aria-label="Show flower photos">
-          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde0e0,#f6c1c4);--x:-38px;--y:-8px;--r:-9deg;--hx:-100px;--hy:-22px;--hr:-8deg">&#127799;<img src="assets/offline/flowers-1.jpg" alt="Red roses in a terraced rose garden with a wooden pergola" onerror="this.remove()"></span>
+          <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde0e0,#f6c1c4);--x:-38px;--y:-8px;--r:-9deg;--hx:-100px;--hy:-22px;--hr:-8deg">&#127799;<img src="assets/offline/flowers-1.jpg" alt="Berkeley Rose Garden" onerror="this.remove()"></span>
           <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde0e0,#f6c1c4);--x:36px;--y:-12px;--r:8deg;--hx:100px;--hy:-22px;--hr:8deg">&#127804;<img src="assets/offline/flowers-2.jpg" alt="Bright pink bougainvillea against a blue sky" onerror="this.remove()"></span>
           <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde0e0,#f6c1c4);--x:-26px;--y:16px;--r:6deg;--hx:-50px;--hy:-34px;--hr:-4deg">&#127800;<img src="assets/offline/flowers-5.jpg" alt="Clusters of hot pink geraniums in the sun" onerror="this.remove()"></span>
           <span class="ph" style="--ph-bg:linear-gradient(160deg,#fde0e0,#f6c1c4);--x:28px;--y:14px;--r:-6deg;--hx:50px;--hy:-34px;--hr:4deg">&#127802;<img src="assets/offline/flowers-3.jpg" alt="Orange clivia blooming below the California Tower in Balboa Park" onerror="this.remove()"></span>
