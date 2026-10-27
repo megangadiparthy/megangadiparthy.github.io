@@ -252,8 +252,11 @@ a{color:inherit}
 
 /* ── Writing ── */
 .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:4rem}
-.feat a{background:var(--paper);padding:2.25rem 2rem;text-decoration:none;display:flex;flex-direction:column;gap:.9rem;transition:background .25s}
+.feat a{background:var(--paper);text-decoration:none;display:flex;flex-direction:column;overflow:hidden;transition:background .25s}
 .feat a:hover{background:var(--paper2)}
+.feat img{display:block;width:100%;height:168px;object-fit:cover;transition:transform .5s var(--ease)}
+.feat a:hover img{transform:scale(1.04)}
+.feat-copy{padding:1.35rem 1.5rem 1.55rem;display:flex;flex-direction:column;gap:.75rem;flex:1}
 .feat .k{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
 .feat h3{font-family:var(--serif);font-size:1.6rem;font-weight:400;font-style:italic;line-height:1.15}
 .feat p{font-family:var(--serif);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.6}
@@ -263,9 +266,10 @@ a{color:inherit}
 .wgroup h4{font-family:var(--serif);font-size:1.5rem;font-weight:300;font-style:italic}
 .wgroup h4 span{display:block;font-family:var(--mono);font-style:normal;font-size:9px;letter-spacing:.1em;color:var(--muted);margin-top:.4rem;text-transform:uppercase}
 .wlist{list-style:none}
-.wlist a{display:flex;align-items:baseline;gap:1rem;padding:.7rem 0;border-bottom:1px solid rgba(203,198,185,.5);text-decoration:none;font-family:var(--serif);font-size:1.12rem;font-weight:300;transition:padding .25s,color .25s}
+.wlist a{display:flex;align-items:center;gap:.85rem;padding:.55rem 0;border-bottom:1px solid rgba(203,198,185,.5);text-decoration:none;font-family:var(--serif);font-size:1.12rem;font-weight:300;transition:padding .25s,color .25s}
+.wlist img{width:54px;height:40px;object-fit:cover;flex:0 0 54px;border:1px solid var(--rule)}
 .wlist li:last-child a{border-bottom:none}
-.wlist a:hover{padding-left:.6rem;color:var(--accent)}
+.wlist a:hover{padding-left:.45rem;color:var(--accent)}
 .wlist a small{margin-left:auto;font-family:var(--mono);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 
 /* ── Offline ── */
@@ -965,65 +969,74 @@ body:not(.on-home) .social-dock{opacity:0;transform:translateY(18px);pointer-eve
 
     <div class="feat">
       <a href="https://healthvela.com/learn/prevention-is-the-best-medicine.html" target="_blank" rel="noopener">
-        <span class="k">Longevity · Prevention</span>
-        <h3>Prevention is the most powerful medicine we have</h3>
-        <p>Why the biggest health wins happen years before anything shows up on a chart.</p>
-        <span class="go">Read &#8599;</span>
+        <img src="assets/offline/hiking-1.jpg" alt="Tall pines against a bright sky">
+        <span class="feat-copy">
+          <span class="k">Longevity · Prevention</span>
+          <h3>Prevention is the most powerful medicine we have</h3>
+          <p>Why the biggest health wins happen years before anything shows up on a chart.</p>
+          <span class="go">Read &#8599;</span>
+        </span>
       </a>
       <a href="https://healthvela.com/learn/autoimmune-symptom-tracking-app.html" target="_blank" rel="noopener">
-        <span class="k">Autoimmune · Tracking</span>
-        <h3>Why flares hide in the lag</h3>
-        <p>Autoimmune symptoms often trail their triggers by days &mdash; and how tracking makes that visible.</p>
-        <span class="go">Read &#8599;</span>
+        <img src="assets/offline/hiking-4.jpg" alt="A sunny trail above the hillside">
+        <span class="feat-copy">
+          <span class="k">Autoimmune · Tracking</span>
+          <h3>Why flares hide in the lag</h3>
+          <p>Autoimmune symptoms often trail their triggers by days &mdash; and how tracking makes that visible.</p>
+          <span class="go">Read &#8599;</span>
+        </span>
       </a>
       <a href="https://healthvela.com/learn/entrepreneur-health-why-it-matters.html" target="_blank" rel="noopener">
-        <span class="k">Lifestyle · Founders</span>
-        <h3>Health is your real competitive edge</h3>
-        <p>Sleep, stress lag, and recovery during launch weeks &mdash; health as founder infrastructure.</p>
-        <span class="go">Read &#8599;</span>
+        <img src="assets/offline/food-2.jpg" alt="A morning coffee overlooking the bay">
+        <span class="feat-copy">
+          <span class="k">Lifestyle · Founders</span>
+          <h3>Health is your real competitive edge</h3>
+          <p>Sleep, stress lag, and recovery during launch weeks &mdash; health as founder infrastructure.</p>
+          <span class="go">Read &#8599;</span>
+        </span>
       </a>
     </div>
 
     <div class="wgroup">
       <h4>Longevity<span>8 articles</span></h4>
       <ul class="wlist">
-        <li><a href="https://healthvela.com/learn/longevity-what-actually-works.html" target="_blank" rel="noopener">What actually adds healthy years &mdash; and what's still hype<small>Foundations</small></a></li>
-        <li><a href="https://healthvela.com/learn/exercise-nutrition-emotional-health-longevity.html" target="_blank" rel="noopener">Exercise is the strongest longevity drug<small>Foundations</small></a></li>
-        <li><a href="https://healthvela.com/learn/fast-death-vs-slow-death.html" target="_blank" rel="noopener">Fast death vs. slow death<small>Foundations</small></a></li>
-        <li><a href="https://healthvela.com/learn/heart-disease-deadliest-killer.html" target="_blank" rel="noopener">Heart disease is the deadliest killer &mdash; and one of the most preventable<small>Heart</small></a></li>
-        <li><a href="https://healthvela.com/learn/sleep-best-medicine-for-the-brain.html" target="_blank" rel="noopener">Sleep is the best medicine for your brain<small>Brain</small></a></li>
-        <li><a href="https://healthvela.com/learn/medicine-treats-disease-too-late.html" target="_blank" rel="noopener">Why medicine so often treats disease too late<small>Healthcare</small></a></li>
-        <li><a href="https://healthvela.com/learn/prevention-is-the-best-medicine.html" target="_blank" rel="noopener">Prevention is the most powerful medicine we have<small>Prevention</small></a></li>
-        <li><a href="https://healthvela.com/learn/importance-of-low-stress.html" target="_blank" rel="noopener">Why calm is a real health lever<small>Stress</small></a></li>
+        <li><a href="https://healthvela.com/learn/longevity-what-actually-works.html" target="_blank" rel="noopener"><img src="assets/offline/hiking-3.jpg" alt="">What actually adds healthy years &mdash; and what's still hype<small>Foundations</small></a></li>
+        <li><a href="https://healthvela.com/learn/exercise-nutrition-emotional-health-longevity.html" target="_blank" rel="noopener"><img src="assets/offline/pilates-3.jpg" alt="">Exercise is the strongest longevity drug<small>Foundations</small></a></li>
+        <li><a href="https://healthvela.com/learn/fast-death-vs-slow-death.html" target="_blank" rel="noopener"><img src="assets/offline/places-4.jpg" alt="">Fast death vs. slow death<small>Foundations</small></a></li>
+        <li><a href="https://healthvela.com/learn/heart-disease-deadliest-killer.html" target="_blank" rel="noopener"><img src="assets/offline/flowers-4.jpg" alt="">Heart disease is the deadliest killer &mdash; and one of the most preventable<small>Heart</small></a></li>
+        <li><a href="https://healthvela.com/learn/sleep-best-medicine-for-the-brain.html" target="_blank" rel="noopener"><img src="assets/offline/pilates-lotus.jpg" alt="">Sleep is the best medicine for your brain<small>Brain</small></a></li>
+        <li><a href="https://healthvela.com/learn/medicine-treats-disease-too-late.html" target="_blank" rel="noopener"><img src="assets/offline/places-1.jpg" alt="">Why medicine so often treats disease too late<small>Healthcare</small></a></li>
+        <li><a href="https://healthvela.com/learn/prevention-is-the-best-medicine.html" target="_blank" rel="noopener"><img src="assets/offline/hiking-1.jpg" alt="">Prevention is the most powerful medicine we have<small>Prevention</small></a></li>
+        <li><a href="https://healthvela.com/learn/importance-of-low-stress.html" target="_blank" rel="noopener"><img src="assets/offline/flowers-1.jpg" alt="">Why calm is a real health lever<small>Stress</small></a></li>
       </ul>
     </div>
 
     <div class="wgroup">
       <h4>Skin &amp; flares<span>10 articles</span></h4>
       <ul class="wlist">
-        <li><a href="https://healthvela.com/learn/autoimmune-symptom-tracking-app.html" target="_blank" rel="noopener">Autoimmune symptom tracking: why flares hide in the lag<small>Autoimmune</small></a></li>
-        <li><a href="https://healthvela.com/learn/habits-for-psoriasis-flare-ups.html" target="_blank" rel="noopener">The Koebner effect &amp; quiet levers for psoriasis<small>Psoriasis</small></a></li>
-        <li><a href="https://healthvela.com/learn/food-triggers-psoriasis-habits.html" target="_blank" rel="noopener">Food triggers for psoriasis: why the reaction shows up late<small>Psoriasis</small></a></li>
-        <li><a href="https://healthvela.com/learn/sample-psoriasis-triggers.html" target="_blank" rel="noopener">Sample psoriasis triggers &mdash; sleep, stress, sugar, meds &amp; friction<small>Triggers</small></a></li>
-        <li><a href="https://healthvela.com/learn/habits-for-eczema-flare-ups.html" target="_blank" rel="noopener">Why eczema night itch hits harder<small>Eczema</small></a></li>
-        <li><a href="https://healthvela.com/learn/habits-for-acne-breakouts.html" target="_blank" rel="noopener">The delayed breakout nobody mentions<small>Acne</small></a></li>
-        <li><a href="https://healthvela.com/learn/habits-for-rosacea-flares.html" target="_blank" rel="noopener">Why your face remembers heat<small>Rosacea</small></a></li>
-        <li><a href="https://healthvela.com/learn/sleep-and-skin-connection.html" target="_blank" rel="noopener">Why itch gets louder after midnight<small>Sleep</small></a></li>
-        <li><a href="https://healthvela.com/learn/sunlight-and-skin.html" target="_blank" rel="noopener">Sunlight and skin: vitamin D and morning light<small>Sunlight</small></a></li>
-        <li><a href="https://healthvela.com/learn/sunlight-antifungal-and-coconut-oil.html" target="_blank" rel="noopener">Sunlight, coconut oil &amp; antifungal skin care<small>Fungal-prone skin</small></a></li>
+        <li><a href="https://healthvela.com/learn/autoimmune-symptom-tracking-app.html" target="_blank" rel="noopener"><img src="assets/offline/flowers-2.jpg" alt="">Autoimmune symptom tracking: why flares hide in the lag<small>Autoimmune</small></a></li>
+        <li><a href="https://healthvela.com/learn/habits-for-psoriasis-flare-ups.html" target="_blank" rel="noopener"><img src="assets/offline/flowers-5.jpg" alt="">The Koebner effect &amp; quiet levers for psoriasis<small>Psoriasis</small></a></li>
+        <li><a href="https://healthvela.com/learn/food-triggers-psoriasis-habits.html" target="_blank" rel="noopener"><img src="assets/offline/food-5.jpg" alt="">Food triggers for psoriasis: why the reaction shows up late<small>Psoriasis</small></a></li>
+        <li><a href="https://healthvela.com/learn/sample-psoriasis-triggers.html" target="_blank" rel="noopener"><img src="assets/offline/food-7.jpg" alt="">Sample psoriasis triggers &mdash; sleep, stress, sugar, meds &amp; friction<small>Triggers</small></a></li>
+        <li><a href="https://healthvela.com/learn/habits-for-eczema-flare-ups.html" target="_blank" rel="noopener"><img src="assets/offline/pilates-lotus.jpg" alt="">Why eczema night itch hits harder<small>Eczema</small></a></li>
+        <li><a href="https://healthvela.com/learn/habits-for-acne-breakouts.html" target="_blank" rel="noopener"><img src="assets/offline/flowers-3.jpg" alt="">The delayed breakout nobody mentions<small>Acne</small></a></li>
+        <li><a href="https://healthvela.com/learn/habits-for-rosacea-flares.html" target="_blank" rel="noopener"><img src="assets/offline/hiking-4.jpg" alt="">Why your face remembers heat<small>Rosacea</small></a></li>
+        <li><a href="https://healthvela.com/learn/sleep-and-skin-connection.html" target="_blank" rel="noopener"><img src="assets/offline/places-6.jpg" alt="">Why itch gets louder after midnight<small>Sleep</small></a></li>
+        <li><a href="https://healthvela.com/learn/sunlight-and-skin.html" target="_blank" rel="noopener"><img src="assets/offline/hiking-1.jpg" alt="">Sunlight and skin: vitamin D and morning light<small>Sunlight</small></a></li>
+        <li><a href="https://healthvela.com/learn/sunlight-antifungal-and-coconut-oil.html" target="_blank" rel="noopener"><img src="assets/offline/food-4.jpg" alt="">Sunlight, coconut oil &amp; antifungal skin care<small>Fungal-prone skin</small></a></li>
       </ul>
     </div>
 
     <div class="wgroup">
       <h4>Food &amp; lifestyle<span>7 articles</span></h4>
       <ul class="wlist">
-        <li><a href="https://healthvela.com/learn/importance-of-rainbow-diet.html" target="_blank" rel="noopener">Why color on your plate matters<small>Diet</small></a></li>
-        <li><a href="https://healthvela.com/learn/importance-of-fiber.html" target="_blank" rel="noopener">Fiber for skin, gut &amp; steady energy<small>Diet</small></a></li>
-        <li><a href="https://healthvela.com/learn/culinary-herbs-taste-and-health.html" target="_blank" rel="noopener">Kitchen herbs: mint, thyme &amp; friends<small>Diet</small></a></li>
-        <li><a href="https://healthvela.com/learn/modern-lifestyle-and-health.html" target="_blank" rel="noopener">Why the modern default is hard on your body<small>Lifestyle</small></a></li>
-        <li><a href="https://healthvela.com/learn/people-around-you-and-health.html" target="_blank" rel="noopener">How the people around you shape your health<small>Social</small></a></li>
-        <li><a href="https://healthvela.com/learn/improving-all-areas-of-life.html" target="_blank" rel="noopener">Improving all areas of life &mdash; without burning out<small>Whole life</small></a></li>
-        <li><a href="https://healthvela.com/learn/entrepreneur-health-why-it-matters.html" target="_blank" rel="noopener">Why entrepreneur health is your real competitive edge<small>Founders</small></a></li>
+        <li><a href="https://healthvela.com/learn/importance-of-rainbow-diet.html" target="_blank" rel="noopener"><img src="assets/offline/food-1.jpg" alt="">Why color on your plate matters<small>Diet</small></a></li>
+        <li><a href="https://healthvela.com/learn/importance-of-fiber.html" target="_blank" rel="noopener"><img src="assets/offline/food-7.jpg" alt="">Fiber for skin, gut &amp; steady energy<small>Diet</small></a></li>
+        <li><a href="https://healthvela.com/learn/culinary-herbs-taste-and-health.html" target="_blank" rel="noopener"><img src="assets/offline/flowers-5.jpg" alt="">Kitchen herbs: mint, thyme &amp; friends<small>Diet</small></a></li>
+        <li><a href="https://healthvela.com/learn/modern-lifestyle-and-health.html" target="_blank" rel="noopener"><img src="assets/offline/places-2.jpg" alt="">Why the modern default is hard on your body<small>Lifestyle</small></a></li>
+        <li><a href="https://healthvela.com/learn/people-around-you-and-health.html" target="_blank" rel="noopener"><img src="assets/offline/places-5.jpg" alt="">How the people around you shape your health<small>Social</small></a></li>
+        <li><a href="https://healthvela.com/learn/improving-all-areas-of-life.html" target="_blank" rel="noopener"><img src="assets/offline/hiking-3.jpg" alt="">Improving all areas of life &mdash; without burning out<small>Whole life</small></a></li>
+        <li><a href="https://healthvela.com/learn/entrepreneur-health-why-it-matters.html" target="_blank" rel="noopener"><img src="assets/offline/food-2.jpg" alt="">Why entrepreneur health is your real competitive edge<small>Founders</small></a></li>
       </ul>
     </div>
   </div>
